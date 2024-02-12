@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="52824cd9-3c48-4ffa-b80b-762c972048c3" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_C03_CPM_Project Partners" searchProperties="true" timeout="0">
+  <con:settings id="e7d0a5ad-6d40-4a4f-bbb5-de4ef5c43473">
+    <con:setting id="4cc49635-c095-48e1-b87b-01e9915a4fb7fileName">TC_C03_CPM_Project-Partners</con:setting>
+    <con:setting id="52824cd9-3c48-4ffa-b80b-762c972048c3fileName">TC_C03_CPM_Project-Partners</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Login" id="6e60d910-9ced-4738-a43c-3252cfedf786">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get All Project Partners Order By Code" id="1c433f42-ec8a-4dde-9bee-f761d6e54e58">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/projectpartners" methodName="Projectpartners" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Project Partners Order By Code" id="793ea526-dede-4467-b623-bca2a7d8f695" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/projectpartners</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="027f579b-6496-410d-a300-6cee8572d879" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c123b6ac-0118-49df-8196-801f17a4589c" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectbyproject;projOraseq=${Login#Response#$['defaultProjectOraseq']},partnCode=${Login#Response#$['partnerCode']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get All Project Partners" id="77e191e1-f0bf-4b8e-a23e-643ef9481fef">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/projectpartners" methodName="Project Contact" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Project Partners" id="4c19172d-05ce-408a-bbca-3546b4864af5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/projectpartners</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="858e84c5-8f71-4853-a7bb-f2cbdaad4d52" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="ce996f98-af73-4d3b-92b5-80e01a84af10" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectbyproject;projOraseq=${Login#Response#$['defaultProjectOraseq']},partnersType=${Login#Response#$['partnerTypeCode']},partnCode=${Login#Response#$['partnerCode']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="96a7611d-1fac-4454-841a-65bf3d97b2ba" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

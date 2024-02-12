@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="8cf8b11b-8c7c-4722-8ba6-89dee2bf73cc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_PL03_PunchListNotes" searchProperties="true" timeout="0">
+  <con:settings id="83036fdb-330a-48ae-add0-d2017589ad6a">
+    <con:setting id="8cf8b11b-8c7c-4722-8ba6-89dee2bf73ccfileName">TC_PL03_PunchListNotes</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Login" id="cb07c3bf-d463-41a3-a745-e4d4928aeac3">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Retrieve PunchList Notes" id="ccd0147d-8f5b-4137-a7ce-ad1315f535d5">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/punchlistnotes" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Retrieve PunchList Notes" id="169f0faa-4860-4d35-af30-a85027392533" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/cmic-field-rest-api/rest/1/punchlistnotes</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3b32507c-22d7-49ce-b5b8-55289e439ab8" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e38b0637-d4ec-485b-a274-ad570b57775d" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="filterbyproject;projUuid=${Login#Response#$['defaultProjectUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="a3c83df3-4ba4-4177-bb4e-1f89c062f931" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

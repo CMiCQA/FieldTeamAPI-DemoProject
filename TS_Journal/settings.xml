@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="c112576b-0830-4d8c-8e19-6f5b6ebe0da0" name="TS_Journal">
+  <con:description id="8b951083-f908-4e84-a7d5-c2695fab1fc6">The user can create a Daily Journal by API. Apart from that users can add/update/delete Notes, Attachments and Sub Module like Manpower, Visitor, Safety, and Trade Equipment through API.</con:description>
+  <con:settings id="50d2c33d-d7a0-44c9-8c65-661367b67d26">
+    <con:setting id="c112576b-0830-4d8c-8e19-6f5b6ebe0da0fileName">TS_Journal</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="80c37e4a-ad8c-480c-a225-ece6eba71a96" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_J11_PM_Daily_Journal_Endpoint" searchProperties="true" timeout="0">
+  <con:settings id="4e8866cd-0ddc-4b90-a4a8-62911414b773">
+    <con:setting id="80c37e4a-ad8c-480c-a225-ece6eba71a96fileName">TC_J11_PM_Daily_Journal_Endpoint</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="f95f55d5-ad76-4d65-9b36-8a82b71d5722">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>1</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>JournalID</PropertyName0>
+          <repetitionCountJournalID>0</repetitionCountJournalID>
+          <repeatValuesJournalID>false</repeatValuesJournalID>
+          <PasswordDataGeneratorUseSpacesJournalID>false</PasswordDataGeneratorUseSpacesJournalID>
+          <PasswordDataGeneratorUsePunctuationMarksJournalID>false</PasswordDataGeneratorUsePunctuationMarksJournalID>
+          <PasswordDataGeneratorUseLettersJournalID>true</PasswordDataGeneratorUseLettersJournalID>
+          <PasswordDataGeneratorUseDigitsJournalID>true</PasswordDataGeneratorUseDigitsJournalID>
+          <PasswordDataGeneratorMaxCharacterCountJournalID>10</PasswordDataGeneratorMaxCharacterCountJournalID>
+          <PasswordDataGeneratorMinCharacterCountJournalID>5</PasswordDataGeneratorMinCharacterCountJournalID>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>JournalID</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login" id="93912cca-c6cf-42e6-9b6d-33c959259c3b">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get All Journal" id="e6d0cddb-a1be-4c9c-a06e-f0dce33dfb41">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmdailyjournal" methodName="Retrieve Journals" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Journal" id="dfcaf744-07e0-4c4e-b78b-0df2da0e2e39" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmdailyjournal</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="95224ae3-9cc5-4cba-bfb6-eb3b490937a7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="5deec01a-0914-4dab-906c-a42ce437ffbf" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Post New Journal" id="d60c172a-b68a-4efd-8b2e-3c0fb06219f7">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmdailyjournal" methodName="Create Journal" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Post New Journal" id="6a03d59f-b7b3-4a45-94c9-04d5cbe71d86" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "GpmjCompCode" : "${Login#Response#$['companyCode']}",\r
+   "GpmjProjCode" : "${Login#Response#$['defaultProjectCode']}",\r
+   "GpmjJournalId" : "${Data Source#JournalID}",\r
+   "GpmjPrepContactCode" : "${Login#Response#$['contactCode']}",\r
+   "GpmjPrepPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "GpmjPrepPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "GpmjVUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmdailyjournal</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="045b4a41-a3ee-4761-a140-a0fb01af896e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="513a90a9-0dde-4a7f-9ac0-ad5733c1ccba" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update Journal" id="df71c5b6-a185-4bd4-9b83-829772f0fb0f">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmdailyjournal/{Uuid}" methodName="Update Specific" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Update Journal" id="a4d7f395-1513-4941-9c0c-a0943b637cea" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{
+	"GpmjRainDayFlag" : "Y"
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmdailyjournal/10F042D67D5A57FDE06338251DAC1937</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b811128c-9f06-4791-9991-67e5d3ec48c6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="bf79becc-2177-4a7e-9874-5205b04bf45a" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Uuid" value="${Post New Journal#Response#$['GpmjVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Journal Via UUid" id="1eddbfb7-b212-431c-924c-0c2b07fff861">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmdailyjournal/{Uuid}" methodName="Retrieve Specific" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Journal Via UUid" id="21bf799a-543a-48f8-b808-d7b71910380a" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmdailyjournal/10F042D67D5A57FDE06338251DAC1937</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6ce25c65-c90a-48f1-bbc0-1acbe4661223" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0074ba3e-a62d-48bc-bf25-c18c90499907" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Uuid" value="${Post New Journal#Response#$['GpmjVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete Journal" id="bf566bb6-6bf9-468e-8c9d-536157d7df41">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals/{UUID}" methodName="Method 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Delete Journal" id="5747a12c-2282-46b2-a403-c731704ccec7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals/112BDBFA4FBBF77DE06338251DACD08B</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="91d363fc-3eaf-4bdf-b65c-3fd368a8a75c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="UUID" value="${Post New Journal#Response#$['GpmjVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="e60b5540-d840-4bbd-a670-a3080a998771" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="DeletePCI" searchProperties="true" timeout="0">
+  <con:settings id="918fce91-7fc4-4d86-99be-e96dc0b5a857">
+    <con:setting id="e60b5540-d840-4bbd-a670-a3080a998771fileName">DeletePCI</con:setting>
+  </con:settings>
+  <con:testStep type="tcintegrationteststep" name="DeletePCI" id="6cae574b-fd57-4104-adc5-c0a16b909fa8">
+    <con:settings/>
+    <con:config>
+      <timeout>600</timeout>
+      <executionResult>0</executionResult>
+      <resultDescription/>
+      <testRunner>TestComplete 15</testRunner>
+      <runMode>UNIT</runMode>
+      <exportTestLog/>
+      <silentModeLog>C:\Users\Administrator\Documents\CMIC_TESTCOMPLETE_PROJECT\CMiC_FieldTeam\CMiC_FieldTeam.pjs</silentModeLog>
+      <projectSuiteFile>C:\Users\Administrator\Documents\TestComplete 15 Projects\CMiC_API_Testing\CMiC_API_Testing.pjs</projectSuiteFile>
+      <projectName>FieldTeam</projectName>
+      <scriptUnit>DeletePCI</scriptUnit>
+      <scriptRoutine>DeletePCI</scriptRoutine>
+      <silentMode>false</silentMode>
+      <showTestLog>false</showTestLog>
+      <warningAsError>false</warningAsError>
+      <test>PMJSP_DeleteBidItem</test>
+      <otherTest/>
+      <otherArgs/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

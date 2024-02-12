@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="9888dfeb-97f9-4839-b3b2-ae51c3fce8d5" name="TS_Punch List">
+  <con:description id="eea664b1-f4f4-4e52-871e-04407dd541b7">The user can create a Punch List with API and the user can link Punch list items to existing API. Users cannot delete Punch List when any Punch List Item is linked with it.</con:description>
+  <con:settings id="1752bbf2-40cf-4912-9235-9512c9fa67f8">
+    <con:setting id="9888dfeb-97f9-4839-b3b2-ae51c3fce8d5fileName">TS_Punch-List</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="7a5bd4a1-1dcd-4807-b8c2-9365df2c4991" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_PL08_PM_Create PunchList With Duplicate Status Code" searchProperties="true" timeout="0">
+  <con:settings id="6fa710fc-c837-408f-a662-97f27495cb9d">
+    <con:setting id="7a5bd4a1-1dcd-4807-b8c2-9365df2c4991fileName">TC_PL08_PM_Create-PunchList-With-Duplicate-Status-Code</con:setting>
+  </con:settings>
+  <con:testStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="datasource" name="Data Source" id="ce84d4a6-0f9b-41ab-95a6-90e376a84ba0">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>StatusCode</PropertyName0>
+          <repetitionCountStatusCode>0</repetitionCountStatusCode>
+          <repeatValuesStatusCode>false</repeatValuesStatusCode>
+          <PasswordDataGeneratorUseSpacesStatusCode>false</PasswordDataGeneratorUseSpacesStatusCode>
+          <PasswordDataGeneratorUsePunctuationMarksStatusCode>false</PasswordDataGeneratorUsePunctuationMarksStatusCode>
+          <PasswordDataGeneratorUseLettersStatusCode>true</PasswordDataGeneratorUseLettersStatusCode>
+          <PasswordDataGeneratorUseDigitsStatusCode>true</PasswordDataGeneratorUseDigitsStatusCode>
+          <PasswordDataGeneratorMaxCharacterCountStatusCode>6</PasswordDataGeneratorMaxCharacterCountStatusCode>
+          <PasswordDataGeneratorMinCharacterCountStatusCode>5</PasswordDataGeneratorMinCharacterCountStatusCode>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>StatusName</PropertyName1>
+          <repetitionCountStatusName>0</repetitionCountStatusName>
+          <repeatValuesStatusName>false</repeatValuesStatusName>
+          <PasswordDataGeneratorUseSpacesStatusName>false</PasswordDataGeneratorUseSpacesStatusName>
+          <PasswordDataGeneratorUsePunctuationMarksStatusName>false</PasswordDataGeneratorUsePunctuationMarksStatusName>
+          <PasswordDataGeneratorUseLettersStatusName>true</PasswordDataGeneratorUseLettersStatusName>
+          <PasswordDataGeneratorUseDigitsStatusName>true</PasswordDataGeneratorUseDigitsStatusName>
+          <PasswordDataGeneratorMaxCharacterCountStatusName>10</PasswordDataGeneratorMaxCharacterCountStatusName>
+          <PasswordDataGeneratorMinCharacterCountStatusName>5</PasswordDataGeneratorMinCharacterCountStatusName>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>StatusCode</con:property>
+      <con:property>StatusName</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="restrequest" name="Post New PunchList Status" id="7bb9e1b6-2745-4f6b-a619-0a675d89cd5f">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmpunchliststatus" methodName="Create Status" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Post New PunchList Status" id="2a244312-45ab-4901-ad9c-e6b94582d023" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "PmplsStatusClassCode" : "s",\r
+   "PmplsStatusCode" : "${Data Source#StatusCode}",\r
+   "PmplsStatusName" : "testing name 1234",\r
+   "PmplsVUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmpunchliststatus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8582ff72-4d10-4dfa-b1d2-e2da9baf5d22" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="60216833-0485-45f9-9e01-118d9e658ff2" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="restrequest" name="Post New PunchList With Duplicate Status" id="e09d75c8-a710-400c-9482-777774117ab0">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmpunchliststatus" methodName="Create Status" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Post New PunchList With Duplicate Status" id="2a244312-45ab-4901-ad9c-e6b94582d023" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "PmplsStatusClassCode" : "s",\r
+   "PmplsStatusCode" : "${Post New PunchList Status#Response#$['PmplsStatusCode']}",\r
+   "PmplsStatusName" : "testing name 1234",\r
+   "PmplsVUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmpunchliststatus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8582ff72-4d10-4dfa-b1d2-e2da9baf5d22" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400,500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="60216833-0485-45f9-9e01-118d9e658ff2" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

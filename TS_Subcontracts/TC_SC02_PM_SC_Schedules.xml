@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="8d44d0b3-d358-4cf1-b7c7-c0e14bb7b090" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_SC02_PM_SC_Schedules" searchProperties="true" timeout="0">
+  <con:settings id="0ca7ce5f-c7b3-4fc1-b9bb-781b7ffd3f98">
+    <con:setting id="5a84c181-5ff4-4699-beea-54b818552f1efileName">TC_SC02_PM_SC_Schedules</con:setting>
+    <con:setting id="8d44d0b3-d358-4cf1-b7c7-c0e14bb7b090fileName">TC_SC02_PM_SC_Schedules</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="10569723-efaf-4051-8d31-a83bb9eb6807">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>3</generatorsTotalNumber>
+          <lastSelectedProperty>2</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>ContactCode</PropertyName0>
+          <repetitionCountContactCode>0</repetitionCountContactCode>
+          <repeatValuesContactCode>false</repeatValuesContactCode>
+          <PasswordDataGeneratorUseSpacesContactCode>false</PasswordDataGeneratorUseSpacesContactCode>
+          <PasswordDataGeneratorUsePunctuationMarksContactCode>false</PasswordDataGeneratorUsePunctuationMarksContactCode>
+          <PasswordDataGeneratorUseLettersContactCode>true</PasswordDataGeneratorUseLettersContactCode>
+          <PasswordDataGeneratorUseDigitsContactCode>true</PasswordDataGeneratorUseDigitsContactCode>
+          <PasswordDataGeneratorMaxCharacterCountContactCode>10</PasswordDataGeneratorMaxCharacterCountContactCode>
+          <PasswordDataGeneratorMinCharacterCountContactCode>5</PasswordDataGeneratorMinCharacterCountContactCode>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>TaskCode</PropertyName1>
+          <repetitionCountTaskCode>0</repetitionCountTaskCode>
+          <repeatValuesTaskCode>false</repeatValuesTaskCode>
+          <PasswordDataGeneratorUseSpacesTaskCode>false</PasswordDataGeneratorUseSpacesTaskCode>
+          <PasswordDataGeneratorUsePunctuationMarksTaskCode>false</PasswordDataGeneratorUsePunctuationMarksTaskCode>
+          <PasswordDataGeneratorUseLettersTaskCode>true</PasswordDataGeneratorUseLettersTaskCode>
+          <PasswordDataGeneratorUseDigitsTaskCode>true</PasswordDataGeneratorUseDigitsTaskCode>
+          <PasswordDataGeneratorMaxCharacterCountTaskCode>10</PasswordDataGeneratorMaxCharacterCountTaskCode>
+          <PasswordDataGeneratorMinCharacterCountTaskCode>5</PasswordDataGeneratorMinCharacterCountTaskCode>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>ContractCode_New</PropertyName2>
+          <repetitionCountContractCode_New>0</repetitionCountContractCode_New>
+          <repeatValuesContractCode_New>false</repeatValuesContractCode_New>
+          <PasswordDataGeneratorUseSpacesContractCode_New>false</PasswordDataGeneratorUseSpacesContractCode_New>
+          <PasswordDataGeneratorUsePunctuationMarksContractCode_New>false</PasswordDataGeneratorUsePunctuationMarksContractCode_New>
+          <PasswordDataGeneratorUseLettersContractCode_New>true</PasswordDataGeneratorUseLettersContractCode_New>
+          <PasswordDataGeneratorUseDigitsContractCode_New>true</PasswordDataGeneratorUseDigitsContractCode_New>
+          <PasswordDataGeneratorMaxCharacterCountContractCode_New>10</PasswordDataGeneratorMaxCharacterCountContractCode_New>
+          <PasswordDataGeneratorMinCharacterCountContractCode_New>5</PasswordDataGeneratorMinCharacterCountContractCode_New>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>ContactCode</con:property>
+      <con:property>TaskCode</con:property>
+      <con:property>ContractCode_New</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login" id="17ccef87-8ae0-4e0c-802b-0aaaf8d7d178">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get All Details" id="73925f71-74d9-4626-975f-23365f7f608c">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scsched/describe" methodName="Retrieve SC Details" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Details" id="374d8525-8b42-4cd2-834d-1e6bae6e05f7" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/scsched/describe</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="de7a5dfb-8126-4802-b460-6dae95bafbdf" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="24a17c03-06e9-4a53-9456-e5672f108142" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET All Masts" id="f7722ead-747d-440a-9cd0-3b6ea056f53c">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scmast" methodName="Retrieve SC Masts" xsi:type="con:RestRequestStep">
+      <con:restRequest name="GET All Masts" id="41462ea5-7b83-4baa-b53c-1c184615b3ed" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/scmast</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="dc9f5b50-7188-4627-bc5d-c85685df4172" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="ac2f41d8-c533-4222-9c2b-ce1ae72f52c2" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Post New Detail" id="3cc34ce5-f9cf-4cf4-9aa9-787afcea54aa">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scsched/describe" methodName="Create Details ( NEED DATA )" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Post New Detail" id="307e220c-6f71-4930-b4b5-5997607c7f7e" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "ScschCompCode" : "${GET All Masts#Response#$['items'][0]['ScmstCompCode']}",\r
+   "ScschJobCode" : "${GET All Masts#Response#$['items'][0]['ScmstJobCode']}",\r
+   "ScschVenCode" : "${GET All Masts#Response#$['items'][0]['ScmstVenCode']}",\r
+   "ScschContCode" : "${Data Source#ContactCode}",\r
+   "ScschChgCode" : "${GET All Masts#Response#$['items'][0]['ScmstChgCode']}",\r
+   "ScschTaskCode" : "task1",\r
+   "ScschPhsCode" : "01-100",\r
+   "ScschCatCode" : "2000",\r
+   "ScschWmCode" : "$",\r
+   "ScschAmt" : 1,\r
+   "ScschVUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/scsched/describe</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c7eeda40-f104-40b8-a78a-1771d6523ecf" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e9ed543a-8c5d-4de2-93dc-dc7a93cce6f7" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Details Via SelectSOV" id="5e22449b-95d3-445b-9945-f6add6e83465">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scsched/describe" methodName="Retrieve SC Details" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Details Via SelectSOV" id="374d8525-8b42-4cd2-834d-1e6bae6e05f7" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/pm-rest-api/rest/1/scsched/describe</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="00e6785b-f241-4ae8-8dec-7e557071e5ea" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e1d529b9-6d2b-4cb6-99e2-1b07126d1d5d" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectSOV;CompCodeVar=${#Project#Company},ContCodeVar=${Data Source#ContractCode_New},JobCodeSOV=${#Project#Job}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update Details" id="ca139c93-f80c-40f8-8f36-20e2c5a26bcb">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scsched/describe/{Uuid}" methodName="Update Specific" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Update Details" id="8f017234-11db-4106-8631-86d931a3c701" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{
+	"ScschLongDesc" : "test123"
+}</con:request>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/pm-rest-api/rest/1/scsched/describe/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="22814867-956f-4ff0-b483-ee5ee0fd61b7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a2f002d5-8892-4705-bcb2-f6a6b087d57f" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Uuid" value="${Get Details Via SelectSOV#Response#$['items'][0]['ScschVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Details Via Uuid" id="1ea5f678-4bd7-4e56-9daa-738f2579d800">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/scsched/describe/{Uuid}" methodName="Retrieve Specific" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Details Via Uuid" id="ee387536-eec1-41d7-8c3c-25a22edf318d" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/pm-rest-api/rest/1/scsched/describe/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5261210a-e214-4c3f-a4a7-6156994b2bcd" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="edce396d-6096-47bf-a700-b025fe4638c1" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Uuid" value="${Get Details Via SelectSOV#Response#$['items'][0]['ScschVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="71e76b1a-91b6-4d26-9e5c-de9e109b795f" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>10569723-efaf-4051-8d31-a83bb9eb6807</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>17ccef87-8ae0-4e0c-802b-0aaaf8d7d178</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>73925f71-74d9-4626-975f-23365f7f608c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f7722ead-747d-440a-9cd0-3b6ea056f53c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3cc34ce5-f9cf-4cf4-9aa9-787afcea54aa</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5e22449b-95d3-445b-9945-f6add6e83465</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ca139c93-f80c-40f8-8f36-20e2c5a26bcb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>1ea5f678-4bd7-4e56-9daa-738f2579d800</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>71e76b1a-91b6-4d26-9e5c-de9e109b795f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

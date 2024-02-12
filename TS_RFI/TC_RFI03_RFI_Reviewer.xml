@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="c6f5ab5e-4177-4188-8610-1077be46a613" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_RFI03_RFI_Reviewer" searchProperties="true" timeout="0">
+  <con:settings id="096c7caa-30de-48eb-a7c2-187da7e5ef61">
+    <con:setting id="b190c44f-8d01-48b8-877b-98234d0cd003fileName">TC_RFI03_RFI_Reviewer</con:setting>
+    <con:setting id="c6f5ab5e-4177-4188-8610-1077be46a613fileName">TC_RFI03_RFI_Reviewer</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="c95bb5a4-b6b6-4430-a3ab-ae494f4ecb50">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>5</generatorsTotalNumber>
+          <lastSelectedProperty>4</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>VUuid</PropertyName0>
+          <repetitionCountVUuid>0</repetitionCountVUuid>
+          <repeatValuesVUuid>false</repeatValuesVUuid>
+          <PasswordDataGeneratorUseSpacesVUuid>false</PasswordDataGeneratorUseSpacesVUuid>
+          <PasswordDataGeneratorUsePunctuationMarksVUuid>false</PasswordDataGeneratorUsePunctuationMarksVUuid>
+          <PasswordDataGeneratorUseLettersVUuid>true</PasswordDataGeneratorUseLettersVUuid>
+          <PasswordDataGeneratorUseDigitsVUuid>true</PasswordDataGeneratorUseDigitsVUuid>
+          <PasswordDataGeneratorMaxCharacterCountVUuid>10</PasswordDataGeneratorMaxCharacterCountVUuid>
+          <PasswordDataGeneratorMinCharacterCountVUuid>5</PasswordDataGeneratorMinCharacterCountVUuid>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>VUid_For Notes</PropertyName1>
+          <repetitionCountVUid_For706ae4d5bfee42799b530071b1181072Notes>0</repetitionCountVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <repeatValuesVUid_For706ae4d5bfee42799b530071b1181072Notes>false</repeatValuesVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorUseSpacesVUid_For706ae4d5bfee42799b530071b1181072Notes>false</PasswordDataGeneratorUseSpacesVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorUsePunctuationMarksVUid_For706ae4d5bfee42799b530071b1181072Notes>false</PasswordDataGeneratorUsePunctuationMarksVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorUseLettersVUid_For706ae4d5bfee42799b530071b1181072Notes>true</PasswordDataGeneratorUseLettersVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorUseDigitsVUid_For706ae4d5bfee42799b530071b1181072Notes>true</PasswordDataGeneratorUseDigitsVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorMaxCharacterCountVUid_For706ae4d5bfee42799b530071b1181072Notes>10</PasswordDataGeneratorMaxCharacterCountVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <PasswordDataGeneratorMinCharacterCountVUid_For706ae4d5bfee42799b530071b1181072Notes>5</PasswordDataGeneratorMinCharacterCountVUid_For706ae4d5bfee42799b530071b1181072Notes>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>VUuid_For Reviewer</PropertyName2>
+          <repetitionCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>0</repetitionCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <repeatValuesVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>false</repeatValuesVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseSpacesVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>false</PasswordDataGeneratorUseSpacesVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUsePunctuationMarksVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>false</PasswordDataGeneratorUsePunctuationMarksVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseLettersVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>true</PasswordDataGeneratorUseLettersVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseDigitsVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>true</PasswordDataGeneratorUseDigitsVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorMaxCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>10</PasswordDataGeneratorMaxCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorMinCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>5</PasswordDataGeneratorMinCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Reviewer>
+          <GeneratorType3>INT</GeneratorType3>
+          <PropertyName3>SeqNum</PropertyName3>
+          <repetitionCountSeqNum>0</repetitionCountSeqNum>
+          <repeatValuesSeqNum>false</repeatValuesSeqNum>
+          <IntegerDataGeneratorMinValueSeqNum>1</IntegerDataGeneratorMinValueSeqNum>
+          <IntegerDataGeneratorMaxValueSeqNum>100</IntegerDataGeneratorMaxValueSeqNum>
+          <IntegerDataGeneratorStepValueSeqNum>1</IntegerDataGeneratorStepValueSeqNum>
+          <IntegerDataGeneratorConsequentValuesSeqNum>false</IntegerDataGeneratorConsequentValuesSeqNum>
+          <GeneratorType4>STR</GeneratorType4>
+          <PropertyName4>VUuid_For Update Reviewer</PropertyName4>
+          <repetitionCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>0</repetitionCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <repeatValuesVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>false</repeatValuesVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseSpacesVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>false</PasswordDataGeneratorUseSpacesVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUsePunctuationMarksVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>false</PasswordDataGeneratorUsePunctuationMarksVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseLettersVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>true</PasswordDataGeneratorUseLettersVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorUseDigitsVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>true</PasswordDataGeneratorUseDigitsVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorMaxCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>10</PasswordDataGeneratorMaxCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <PasswordDataGeneratorMinCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>5</PasswordDataGeneratorMinCharacterCountVUuid_For706ae4d5bfee42799b530071b1181072Update706ae4d5bfee42799b530071b1181072Reviewer>
+          <escapeSpaceSequence>706ae4d5bfee42799b530071b1181072</escapeSpaceSequence>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>VUuid</con:property>
+      <con:property>VUid_For Notes</con:property>
+      <con:property>VUuid_For Reviewer</con:property>
+      <con:property>SeqNum</con:property>
+      <con:property>VUuid_For Update Reviewer</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login" id="283bf0e8-2ac2-41d6-a33b-3867fd35b81d">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Get RFI By Status" id="79a9483e-393d-413e-b2ef-1c5e60726f0a">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/{path}" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Get RFI By Status" id="549f3433-bcb3-477b-916e-83673aa3ae97" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/rfi12</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8a838521-e83c-4f24-889c-92179d932680" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="13258d53-631b-4945-b7cc-01c3ed96be97" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="path" value="rfisv12"/>
+          <con:entry key="finder" value="selectbyproject;projOraseq=${Login#Response#$['defaultProjectOraseq']},rfiStatus=&quot;open,closed&quot;"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Create New RFI" id="9c5397d2-287d-4f69-af42-b1bf3c8df475">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/rfisv12" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Create New RFI" id="b68f4dce-0ec5-43e9-8abc-8a554298c8a7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmscrfiCompCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiCompCode']}",\r
+   "PmscrfiFromPartnCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiFromPartnCode']}",\r
+   "PmscrfiFromPartnTypeCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiFromPartnTypeCode']}",\r
+   "PmscrfiProjOraseq" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiProjOraseq']}",\r
+   "PmscrfiQuestion" : "What size door should we add in the lobby?",\r
+   "PmscrfiRecordStatus" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiRecordStatus']}",\r
+   "PmscrfiRequiredDate" : "2023-06-16T02:02:44.291Z",\r
+   "PmscrfiScheduleImpactFlag" : "N",\r
+   "PmscrfiStatusCode" : "${#TestSuite#RFIStatusCode}",\r
+   "PmscrfiSubject" : "Change Door Size - Main Lobby",\r
+   "PmscrfiSubmittedDate" : "2023-06-14T02:03:38.636Z",\r
+   "PmscrfiSuggestion" : "None.",\r
+   "PmscrfiToContactCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiToContactCode']}",\r
+   "PmscrfiToPartnCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiToPartnCode']}",\r
+   "PmscrfiToPartnTypeCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiToPartnTypeCode']}",\r
+   "VUuid" : "${Data Source#VUuid}",\r
+   "PmscrfiFromContactCode" : "${CPM Get RFI By Status#Response#$['items'][0]['PmscrfiFromContactCode']}"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/rfisv12</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="95be8279-a78d-48e4-8d23-d7ee692403c5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201,200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d6a3b22d-d239-41f8-a538-2da3c9fdecd2" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Add notes to RFI" id="95fc9bc6-b082-478f-9420-0fd366eaffe1">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/rfisv12/{ObjectVuuid}/child/NoteV12View" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Add notes to RFI" id="cc4013c9-841c-4bde-bb46-06fff4dae96f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmnContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmnInternalFlag" : "Y",\r
+   "PmnNote" : "from ws",\r
+   "PmnObjectOraseq" : "${CPM Create New RFI#Response#$['PmscrfiRfiOraseq']}",\r
+   "PmnObjectType" : "PMRFI",\r
+   "PmnPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmnPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmnStatusCode" : "",\r
+   "PmnSubject" : null,\r
+   "VUuid" : "${Data Source#VUid_For Notes}"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/rfisv12/vTP1m6Y/child/NoteV12View</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fc77ad70-6077-40a5-98e8-43d4d70ca11e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201,200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="bd8405d3-fed8-4d8e-aa14-fabbe09575a6" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="ObjectVuuid" value="${CPM Create New RFI#Response#$['VUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM RFI Create A Reviewer" id="f43bf330-4dd5-4a6e-8f65-2ebc57f8f006">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/rfisv12/{objectVuuid}/child/ReviewersView" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM RFI Create A Reviewer" id="e32eed01-ac83-4f37-be48-54deefbdd69b" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmrActionDate" : null,\r
+   "PmrContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmrContactEmail" : "${Login#Response#$['email']}",\r
+   "PmrContactName" : "${CPM Create New RFI#Response#$['PmscrfiFromContactName']}",\r
+   "PmrDlistContReviewedFlag" : null,\r
+   "PmrDueDate" : "2019-11-25T00:00:00-05:00",\r
+   "PmrGlobalUpdateDate" : "2019-11-25T15:08:16-05:00",\r
+   "PmrInSequenceFlag" : null,\r
+   "PmrLeadTime" : null,\r
+   "PmrObjectOraseq" : "${CPM Create New RFI#Response#$['PmscrfiRfiOraseq']}",\r
+   "PmrObjectType" : "${CPM Add notes to RFI#Response#$['PmnObjectType']}",\r
+   "PmrPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmrPartnName" : "RJ QA LATEST Project 01",\r
+   "PmrPartnTypeCode" : "${CPM Add notes to RFI#Response#$['PmnPartnTypeCode']}",\r
+   "PmrPmdlDlistCode" : null,\r
+   "PmrProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmrRequiredReviewerFlag" : "N",\r
+   "PmrReviewerRoleCode" : null,\r
+   "PmrReviewerRoleDesc" : null,\r
+   "PmrSeqNum" : "${Data Source#SeqNum}",\r
+   "PmrStatusCode" : null,\r
+   "PmrStatusDesc" : null,\r
+   "VUuid" : "${Data Source#VUuid_For Reviewer}"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/rfisv12/K1axXf/child/ReviewersView</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8fbdbd57-b5ff-44d9-9963-8d186a895eb3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201,200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="b78c89d6-eb52-44ff-aeeb-bcc8a51f4d3d" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="objectVuuid" value="${CPM Create New RFI#Response#$['VUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM RFI Update Reviewer Data" id="f1facc27-40b4-42d1-8e26-9da84ad98d92">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/rfisv12/{ObjectVuuid}/child/ReviewersView/{ReviewerVuuid}" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM RFI Update Reviewer Data" id="c21604c1-2cc6-4fd5-97c4-6c18ee6129dd" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmrActionDate" : null,\r
+   "PmrContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmrContactEmail" : "${Login#Response#$['email']}",\r
+   "PmrContactName" : "${CPM Create New RFI#Response#$['PmscrfiFromContactName']}",\r
+   "PmrDlistContReviewedFlag" : null,\r
+   "PmrDueDate" : "2019-11-25T00:00:00-05:00",\r
+   "PmrGlobalUpdateDate" : "2019-11-25T15:08:16-05:00",\r
+   "PmrInSequenceFlag" : null,\r
+   "PmrLeadTime" : null,\r
+   "PmrObjectOraseq" : "${CPM Create New RFI#Response#$['PmscrfiRfiOraseq']}",\r
+   "PmrObjectType" : "${CPM Add notes to RFI#Response#$['PmnObjectType']}",\r
+   "PmrPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmrPartnName" : "",\r
+   "PmrPartnTypeCode" : "${CPM Add notes to RFI#Response#$['PmnPartnTypeCode']}",\r
+   "PmrPmdlDlistCode" : null,\r
+   "PmrProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmrRequiredReviewerFlag" : "N",\r
+   "PmrReviewerRoleCode" : null,\r
+   "PmrReviewerRoleDesc" : null,\r
+   "PmrSeqNum" : 2,\r
+   "PmrStatusCode" : null,\r
+   "PmrStatusDesc" : null,\r
+   "VUuid" : "${Data Source#VUuid_For Update Reviewer}"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/rfisv12/a2kv6/child/ReviewersView/FQ9kIH3uid</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="079bc9a4-c6ac-470e-9464-2bb181f5b62d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c859c824-fe40-44f6-bf70-724a02ce03c8" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="ReviewerVuuid" value="${CPM RFI Create A Reviewer#Response#$['VUuid']}"/>
+          <con:entry key="ObjectVuuid" value="${CPM RFI Create A Reviewer#Response#$['PmrObjectVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM RFI Delete Reviewer Data" id="481439de-f442-4809-b504-f5f7246e4a3e">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/rfisv12/{ObjectVuuid}/child/ReviewersView/{ReviewVuuid}" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM RFI Delete Reviewer Data" id="0c2927a0-44c0-4d6f-839a-5205c9dae958" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/rfisv12/1I7PY2x0J/child/ReviewersView/KCBLT46Erl</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="53ab8b23-132b-4a41-a1d5-8df3a33b31cf" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f6004f97-1628-48cd-b187-7d61af2203b5" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="ReviewVuuid" value="${CPM RFI Create A Reviewer#Response#$['VUuid']}"/>
+          <con:entry key="ObjectVuuid" value="${CPM RFI Create A Reviewer#Response#$['PmrObjectVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="c038d9d4-0cd2-425a-94db-5fa3a6865144" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

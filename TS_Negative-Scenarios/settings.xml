@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="d6b4fbe9-686e-43af-a704-57dfbbd3c1a6" name="TS_Negative Scenarios" disabled="true">
+  <con:settings id="aa80dc7d-6f0c-4d55-a057-c44b1228c56c">
+    <con:setting id="d6b4fbe9-686e-43af-a704-57dfbbd3c1a6fileName">TS_Negative-Scenarios</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

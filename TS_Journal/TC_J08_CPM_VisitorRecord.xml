@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="7669adb9-8408-4b7f-a1b9-5d46052816c7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_J08_CPM_VisitorRecord" searchProperties="true" timeout="0">
+  <con:settings id="4a4ec665-51a4-459a-89d8-f094582eaab8">
+    <con:setting id="7669adb9-8408-4b7f-a1b9-5d46052816c7fileName">TC_J08_CPM_VisitorRecord</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Login" id="1d3824ec-ec87-425b-9d5c-5235193ae725">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGen" id="e0fcdaea-0c53-4862-82b2-86b3958b7929">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def today = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return today.format( new Date())</script>
+        </con:configuration>
+        <con:name>Date</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="Data Source" id="7cd5f96f-4831-40b8-ac32-27ad045d4a3a">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>1</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>Uuid</PropertyName0>
+          <repetitionCountUuid>0</repetitionCountUuid>
+          <repeatValuesUuid>false</repeatValuesUuid>
+          <PasswordDataGeneratorUseSpacesUuid>false</PasswordDataGeneratorUseSpacesUuid>
+          <PasswordDataGeneratorUsePunctuationMarksUuid>false</PasswordDataGeneratorUsePunctuationMarksUuid>
+          <PasswordDataGeneratorUseLettersUuid>true</PasswordDataGeneratorUseLettersUuid>
+          <PasswordDataGeneratorUseDigitsUuid>true</PasswordDataGeneratorUseDigitsUuid>
+          <PasswordDataGeneratorMaxCharacterCountUuid>10</PasswordDataGeneratorMaxCharacterCountUuid>
+          <PasswordDataGeneratorMinCharacterCountUuid>5</PasswordDataGeneratorMinCharacterCountUuid>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>UUID_New</PropertyName1>
+          <repetitionCountUUID_New>0</repetitionCountUUID_New>
+          <repeatValuesUUID_New>false</repeatValuesUUID_New>
+          <PasswordDataGeneratorUseSpacesUUID_New>false</PasswordDataGeneratorUseSpacesUUID_New>
+          <PasswordDataGeneratorUsePunctuationMarksUUID_New>false</PasswordDataGeneratorUsePunctuationMarksUUID_New>
+          <PasswordDataGeneratorUseLettersUUID_New>true</PasswordDataGeneratorUseLettersUUID_New>
+          <PasswordDataGeneratorUseDigitsUUID_New>true</PasswordDataGeneratorUseDigitsUUID_New>
+          <PasswordDataGeneratorMaxCharacterCountUUID_New>60</PasswordDataGeneratorMaxCharacterCountUUID_New>
+          <PasswordDataGeneratorMinCharacterCountUUID_New>5</PasswordDataGeneratorMinCharacterCountUUID_New>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Uuid</con:property>
+      <con:property>UUID_New</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Create A New Daily Journal Record" id="48e75ced-a92d-446f-8886-3dba179f2a45">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Create A New Daily Journal Record" id="c7135942-6467-48c9-9294-2ec5a74b4fe9" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmjCompCode" : "${Login#Response#$['companyCode']}",\r
+   "PmjDate" : "${DataGen#Date}T00:00:00-04:00",\r
+   "PmjHighTemp" : 13,\r
+   "PmjLowTemp" : 12,\r
+   "PmjPrecipitation" : 10,\r
+   "PmjPrepContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmjPrepPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmjPrepPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmjProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmjRainDayFlag" : "N",\r
+   "PmjRecordStatus" : "SUBMITTED",\r
+   "PmjSubmContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmjSubmPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmjSubmPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmjVUuid" : "${Data Source#Uuid}",\r
+   "PmjWindConditions" : "10 kph"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d304ab1e-ee88-4693-b7ec-d1e36b0dcf07" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="fa388b4c-3f49-4ab1-8fbd-99b4de64c853" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create Visitor Record" id="1c726778-fab0-4ada-a215-221eaf2cac2b">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals/{UUID}/child/Visitors" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create Visitor Record" id="7bd99ec1-f970-4ab5-ade7-02a47cc7796f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmjviContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmjviContactName" : "${Login#Response#$['companyName']}",\r
+   "PmjviGlobalUpdateDate" : "${DataGen#Date}T12:47:00-04:00",\r
+   "PmjviNotes" : "RJAPI TEST",\r
+   "PmjviPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmjviPartnName" : "${Login#Response#$['partnerCode']}",\r
+   "PmjviPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmjviTime" : null,\r
+   "PmjviVUuid" : "${Data Source#UUID_New}",\r
+   "PmjviJournalVUuid" : "${CPM Create A New Daily Journal Record#Response#$['PmjVUuid']}"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals/UUID/child/Visitors</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="76c277d2-aa0e-4d5b-9c64-68bef8add67b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="ac2c3b22-4e14-4541-9215-5e5ef68be8f5" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="UUID" value="${CPM Create A New Daily Journal Record#Response#$['PmjVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update Visitor Record" id="93cc4373-67e6-46a0-b244-b1eb8b791243">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals/{UUID}/child/Visitors/{VISITORUUID}" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Update Visitor Record" id="066286ed-7708-454c-941d-416976d1d19e" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{
+      "PmjviNotes": "UPDATE NOTES"    
+ }</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals/K0rYAn62y1sH4D65SVMk6/child/Visitors/6rx3JT5</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c0c81935-7e2b-4fce-9025-292db5d7e180" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="83d07d13-5da4-4776-8f85-4573f531c086" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="VISITORUUID" value="${Create Visitor Record#Response#$['PmjviVUuid']}"/>
+          <con:entry key="UUID" value="${Create Visitor Record#Response#$['PmjviJournalVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete Visitor Record" id="5db3b5f7-84e1-47a4-939b-db38d7d719e9">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals/{UUID}/child/Visitors/{VISITORUUID}" methodName="Method 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Delete Visitor Record" id="ba61837c-4576-4ef8-9d91-e3b4cf51ca64" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals/6rx3JT5/child/Visitors/K0rYAn62y1sH4D65SVMk6</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="2bc23bff-6867-4b20-8b89-0f2171542f89" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="4879bc02-a581-46f2-ae5b-9d976ed8276c" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="VISITORUUID" value="${Create Visitor Record#Response#$['PmjviVUuid']}"/>
+          <con:entry key="UUID" value="${Create Visitor Record#Response#$['PmjviJournalVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="fc51b2d6-ce6e-4cd0-a784-d6bea25262f1" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete Daily Journal Record" id="266183ce-b139-4086-a897-b6947a0c0bfd">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/journals/{UUID}" methodName="Method 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Delete Daily Journal Record" id="5747a12c-2282-46b2-a403-c731704ccec7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/journals/45v59H8a39</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b6b66f5d-bc1a-436e-b04a-096390e0aaf4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0fa5c8ae-4e9f-44cf-81ef-a7ce2c079693" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="UUID" value="${CPM Create A New Daily Journal Record#Response#$['PmjVUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

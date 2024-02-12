@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="TestRail" path="index.php?/api/v2/add_result_for_case/{RunID}/{TestCaseID}" id="bf63281f-09ac-4b5c-87a6-2826034a97f4">
+  <con:settings id="3177be4f-9b24-458a-a69b-21c76d81bd2f">
+    <con:setting id="bf63281f-09ac-4b5c-87a6-2826034a97f4fileName">TestRail</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>RunID</con:name>
+      <con:value>3231</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>3231</con:default>
+    </con:parameter>
+    <con:parameter>
+      <con:name>TestCaseID</con:name>
+      <con:value>3321323</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>3321323</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="0dcab3b3-84e9-4fff-869c-eb081f8cb633" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400 401</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="c105f5b4-44e1-4290-a356-d6b710a7df0b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>UPG</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>QADAILY</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>QADAILY2</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>QALATEST</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

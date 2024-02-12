@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="RFICreate" path="/cmic-field-rest-api/rest/1/rfisv12" id="f837637b-a715-46a0-a2a3-ca6c20133e80">
+  <con:settings id="d9ba710d-6dab-404d-9ac8-a610dc167577">
+    <con:setting id="f837637b-a715-46a0-a2a3-ca6c20133e80fileName">RFICreate</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="NoteV12View" path="{ObjectVuuid}/child/NoteV12View" id="5c2063d3-5ec2-4856-99c4-f3e270c58fa3">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="766b2a88-cb18-44d9-9e9c-44e962a75ae9" method="POST">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>ObjectVuuid</con:name>
+          <con:value>1234</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>1234</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 415 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:not="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/972A4FB402DE15BEE0536900A8C04C13/child/NoteV12View">not:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>404</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:html</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:html</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="cc4013c9-841c-4bde-bb46-06fff4dae96f" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="SubNotesView" path="{objectVuuid}/child/NoteV12View/{NoteVuuid}/child/SubNotesView" id="94d77e52-15f0-4147-8c26-5b057a2541b1">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>NoteVuuid</con:name>
+        <con:value>aa</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>aa</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="e66b205d-c3a6-473f-a474-dc9f06fbe118" method="POST">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>objectVuuid</con:name>
+          <con:value>S7dihe7nNz0vGR5QN</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>S7dihe7nNz0vGR5QN</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:sub="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/23456/child/NoteV12View/123456/child/SubNotesView">sub:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="7e904e2b-3b6d-4a9d-97d7-576c13648243" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="ReviewersView" path="{objectVuuid}/child/ReviewersView" id="621d2f57-b5d6-47cd-8f53-18796e31510d">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="b5271ecd-2e7f-43c3-9cee-230b454bf006" method="POST">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>objectVuuid</con:name>
+          <con:value>12356789</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>12356789</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:rev="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/12356789/child/ReviewersView">rev:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:html</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType/>
+        <con:status>0</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="e32eed01-ac83-4f37-be48-54deefbdd69b" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="RFI Put" path="{ObjectVuuid}/child/NoteV12View/{NoteVuuid}" id="211dccfa-37ba-4ef6-a73a-3323bf9c8226">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>ObjectVuuid</con:name>
+        <con:value>12345</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>12345</con:default>
+      </con:parameter>
+      <con:parameter>
+        <con:name>NoteVuuid</con:name>
+        <con:value xsi:nil="true"/>
+        <con:style>TEMPLATE</con:style>
+        <con:default xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="978af982-2faa-4247-9fad-adf7f67965b8" method="PUT">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/972A4FB402DE15BEE0536900A8C04C13/child/NoteV12View/12345">ns:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="f1165f2c-1950-40cb-bde5-0f4ae85804ec" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="RFI Review Put" path="{ObjectVuuid}/child/ReviewersView/{ReviewerVuuid}" id="c4f99c2d-9337-4dae-89b8-983d89f63bcf">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>ObjectVuuid</con:name>
+        <con:value>ObjectVuuid</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>ObjectVuuid</con:default>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ReviewerVuuid</con:name>
+        <con:value>ReviewerVuuid</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>ReviewerVuuid</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="23d8dd28-1b68-4b25-b845-5c04fe3ee5c9" method="PUT">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType/>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/1234/child/ReviewersView/56789">ns:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="c21604c1-2cc6-4fd5-97c4-6c18ee6129dd" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="RFI Patch" path="{Vuuid}" id="f7e2db86-bd59-4f55-a369-2fe094315083">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="51601b12-6dcf-45c0-a69c-52fbce98ff33" method="PATCH">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Vuuid</con:name>
+          <con:value>123</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>123</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://dev6v12.cmic.ca/cmicdevv12/cmic-field-rest-api/rest/1/rfisv12/123">ns:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="51e4f87d-9cf1-40cf-9839-94c2823bce2e" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="Delete RFI" path="{ObjectVuuid}/child/ReviewersView/{ReviewVuuid}" id="f1b4f766-6988-4f7f-8559-27d457ca66fa">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>ReviewVuuid</con:name>
+        <con:value>12345</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>12345</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="90e6ea49-e9d3-4405-aac4-fd0fcda8cb47" method="DELETE">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>ObjectVuuid</con:name>
+          <con:value>12345678</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>12345678</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType/>
+        <con:status>204</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>404 500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="0c2927a0-44c0-4d6f-839a-5205c9dae958" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:method name="Method 1" id="5c932a7d-6c88-448c-b3b2-ca6bd374dfd1" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:status>400 500</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType/>
+      <con:status>415 500</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="b68f4dce-0ec5-43e9-8abc-8a554298c8a7" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>UPG</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>QADAILY</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>QADAILY2</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>QALATEST</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="DeleteRFIwithoutVUUid" id="142aeef4-f3f5-4aed-ba94-360e09b2b60d" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="2d3f0188-70dc-49b5-aa2f-736382fb9d72" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

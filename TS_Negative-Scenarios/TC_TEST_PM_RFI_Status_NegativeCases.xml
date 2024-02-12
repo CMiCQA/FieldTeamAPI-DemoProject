@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="ebfcf607-d912-4e39-81fe-e92a5966370c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_TEST_PM_RFI_Status_NegativeCases" searchProperties="true" timeout="0">
+  <con:settings id="16edcac3-a39b-4c14-9599-d68efa87716a">
+    <con:setting id="ebfcf607-d912-4e39-81fe-e92a5966370cfileName">TC_TEST_PM_RFI_Status_NegativeCases</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="DynamicDataGenerator" id="c5c8ed41-a982-4b3b-806e-c06291065515">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>3</generatorsTotalNumber>
+          <lastSelectedProperty>1</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>StausCode >10 char</PropertyName0>
+          <repetitionCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>0</repetitionCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <repeatValuesStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>false</repeatValuesStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorUseSpacesStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>false</PasswordDataGeneratorUseSpacesStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorUsePunctuationMarksStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>false</PasswordDataGeneratorUsePunctuationMarksStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorUseLettersStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>true</PasswordDataGeneratorUseLettersStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorUseDigitsStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>true</PasswordDataGeneratorUseDigitsStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorMaxCharacterCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>20</PasswordDataGeneratorMaxCharacterCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <PasswordDataGeneratorMinCharacterCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>15</PasswordDataGeneratorMinCharacterCountStausCode9c63751799b84663bdda66c433d60e129c63751799b84663bdda66c433d60e12109c63751799b84663bdda66c433d60e12char>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>ValidStatusCode</PropertyName1>
+          <repetitionCountValidStatusCode>0</repetitionCountValidStatusCode>
+          <repeatValuesValidStatusCode>false</repeatValuesValidStatusCode>
+          <PasswordDataGeneratorUseSpacesValidStatusCode>false</PasswordDataGeneratorUseSpacesValidStatusCode>
+          <PasswordDataGeneratorUsePunctuationMarksValidStatusCode>false</PasswordDataGeneratorUsePunctuationMarksValidStatusCode>
+          <PasswordDataGeneratorUseLettersValidStatusCode>true</PasswordDataGeneratorUseLettersValidStatusCode>
+          <PasswordDataGeneratorUseDigitsValidStatusCode>true</PasswordDataGeneratorUseDigitsValidStatusCode>
+          <PasswordDataGeneratorMaxCharacterCountValidStatusCode>10</PasswordDataGeneratorMaxCharacterCountValidStatusCode>
+          <PasswordDataGeneratorMinCharacterCountValidStatusCode>5</PasswordDataGeneratorMinCharacterCountValidStatusCode>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>ValidStatusClassCode</PropertyName2>
+          <repetitionCountValidStatusClassCode>0</repetitionCountValidStatusClassCode>
+          <repeatValuesValidStatusClassCode>false</repeatValuesValidStatusClassCode>
+          <PasswordDataGeneratorUseSpacesValidStatusClassCode>false</PasswordDataGeneratorUseSpacesValidStatusClassCode>
+          <PasswordDataGeneratorUsePunctuationMarksValidStatusClassCode>false</PasswordDataGeneratorUsePunctuationMarksValidStatusClassCode>
+          <PasswordDataGeneratorUseLettersValidStatusClassCode>true</PasswordDataGeneratorUseLettersValidStatusClassCode>
+          <PasswordDataGeneratorUseDigitsValidStatusClassCode>false</PasswordDataGeneratorUseDigitsValidStatusClassCode>
+          <PasswordDataGeneratorMaxCharacterCountValidStatusClassCode>1</PasswordDataGeneratorMaxCharacterCountValidStatusClassCode>
+          <PasswordDataGeneratorMinCharacterCountValidStatusClassCode>1</PasswordDataGeneratorMinCharacterCountValidStatusClassCode>
+          <escapeSpaceSequence>9c63751799b84663bdda66c433d60e12</escapeSpaceSequence>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>StausCode >10 char</con:property>
+      <con:property>ValidStatusCode</con:property>
+      <con:property>ValidStatusClassCode</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="DataDriven_Input" id="6511228d-55db-4863-8ed2-1ff1fa15fd8e">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Grid">
+        <con:configuration>
+          <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusClassCode}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#StausCode >10 char}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusClassCode}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusCode}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <recognizeAsPlainText>false</recognizeAsPlainText>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>StatusClassCode</con:property>
+      <con:property>StatusCode</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create New Status" id="a2d16372-5591-48df-ba3d-725e8e824b16">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmrfistatus" methodName="Create Status" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create New Status" id="bda21399-7b17-4573-b337-fcb99f512f27" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "PmrfisStatusClassCode" : "Z",\r
+   "PmrfisStatusCode" : "${Data Source#StatusCode}",\r
+   "PmrfisSystemFlag" : "N"\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmrfistatus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="857026b0-9bb7-4166-b2c9-7dbaa55f84c1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400,500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="09af67ac-fbaf-4535-8342-a16f7e5aaec4" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="500" id="625ce566-609b-4469-a1e4-48c039be7702">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="8fc169d0-4855-4106-8529-b5d978e5d6cb">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataDriven_Input</dataSourceStep>
+      <targetStep>Create New Status</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="3828fe3e-a2d3-4779-8983-3559be7c3fa7" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

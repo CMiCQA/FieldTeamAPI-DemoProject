@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="632fe1c3-90ce-41ef-a4e1-64ffdf637a1c" name="TS_Contacts">
+  <con:description id="2be4dbf7-07e7-4b67-aef5-76d007a0f0ca">The user can create a Contact and can Assign a Contact through API. Users can Update the contact information and Delete the Contact by API.</con:description>
+  <con:settings id="b4f34501-0529-4117-8819-d4abf74efaf1">
+    <con:setting id="632fe1c3-90ce-41ef-a4e1-64ffdf637a1cfileName">TS_Contacts</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

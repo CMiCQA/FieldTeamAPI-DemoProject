@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="b45cde15-7e86-40f7-8383-657e500d4025" name="TS_PCI">
+  <con:description id="8c36a333-cbcf-44ce-8b52-0ace89fdb4e0">The user can create/update/delete PCI Types/Statuses/Headers/Details/Vendor Details through API.</con:description>
+  <con:settings id="ef033cb3-674b-4ce3-94b9-40067d89e4bd">
+    <con:setting id="b45cde15-7e86-40f7-8383-657e500d4025fileName">TS_PCI</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

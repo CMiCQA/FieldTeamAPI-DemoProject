@@ -1,0 +1,1871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="cm-rest-api" path="cm-rest-api/rest/1" id="fb1385dc-1780-446c-9c1f-d554c314a7af">
+  <con:settings id="c0ba864c-9cdb-475d-842f-24686560bb4c">
+    <con:setting id="fb1385dc-1780-446c-9c1f-d554c314a7affileName">cm-rest-api</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="cmdetail" path="cmdetail" id="b38effab-9f13-407b-9335-42664fc37de6">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="d167ec71-8703-41f1-85d0-50c35a453643">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>VUuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>VUuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="79cfc09f-8efe-46a7-8d74-b9eee4690aa0" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:c1b="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmdetail/C1BD420060AE4565E05316821FAC0B94">c1b:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:c1b="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmdetail/C1BD420060AE4565E05316821FAC0B94">c1b:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="1f50af6b-d15d-4274-8111-91683f2df7b9" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="2a54505e-6ea8-4329-8425-207587fcf0b4" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:vuu="http://dev6v12.cmic.ca/cmicdevv12/cm-rest-api/rest/1/cmdetail/VUuid">vuu:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="0cc15f2a-aba3-4176-9aa0-c7f4da43edb2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Delete Specific" id="d303b2aa-17ab-4931-8b4a-176183116f5d" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="08801ae2-3917-45d2-a952-f85a15763947" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve PCI Details" id="27217872-8d44-4081-9d99-4bae891fa54f" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmd="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmdetail">cmd:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>401</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:html</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="08cf20e8-96d4-49a4-8ce5-2f2797d3957d" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create Detail" id="77202c61-bdb0-461a-a2f0-1d2981be1adb" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cmd="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmdetail">cmd:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="8064fa3a-823b-4ced-970d-2797fa29e4d8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmdetailunposted" path="cmdetailunposted" id="08a319b0-fbdf-4316-a644-941be8eef2fd">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Retrieve Unposted Details" id="a2b42b81-b19f-41d7-be39-782608690d91" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmd="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmdetailunposted">cmd:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="c14a0c54-5089-42fa-a407-3eedf989fc61" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmmast" path="cmmast" id="97d5c733-9a4c-484d-9f26-858eb86592f6">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="ca39a0a3-6ace-48e1-b082-e0d2a50eec21">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>VUuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>VUuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="840ef077-563f-4ecf-90ea-7805dd09464a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:c1b="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmmast/C1BD42034EA24565E05316821FAC0B94">c1b:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:c1b="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmmast/C1BD42034EA24565E05316821FAC0B94">c1b:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404 500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="96d44a78-98bd-4ff9-be14-0f6b300a2df6" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="e772b33d-07b8-4a5e-92cb-c746add42dd9" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dbed="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmmast/DBEDFCC924EE1224E05316821FAC90DF">dbed:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="baa961bc-2433-4128-857c-b23a2c748fa9" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Delete Specific" id="63335f7a-0708-4dc6-ae27-d2241a8f007a" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>400 500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="44e27803-b32b-46ac-beb9-53552b170e49" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve PCI Master" id="197bd03a-038e-4f50-8060-3d24c324cd64" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmm="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmmast">cmm:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="07efccdb-07c0-467e-bbc9-1b1793a49958" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create PCI Master" id="4e91e920-558d-413d-bb51-fd5590be1e92" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>415</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cmm="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmmast">cmm:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="81fea223-9374-452f-b9d7-363306bbc878" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmownerchangeorder" path="cmownerchangeorder" id="5f294393-f4c5-4cb8-a720-b0635c4d9bd3">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="6a9df482-e877-4094-a502-b05749ec0402">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>VUuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>VUuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="a3f1fa7b-5ee4-480e-a31d-450e70673802" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:beb="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmownerchangeorder/BEB07A0660363317E05316821FACA91D">beb:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="6e1d6211-b29e-44d7-8e1d-d6c8d214c5fa" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="c8cc478e-1d89-46e3-aa8c-0a2bbc714c83" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:beb="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmownerchangeorder/BEB07A0660363317E05316821FACA91D">beb:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="885cb7a5-d708-4a6d-b011-019c747ea00f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve OCOs" id="a21fa327-7f7e-4052-9f66-2aa1c5e69892" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmow="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmownerchangeorder">cmow:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="9290d4cc-4bd1-410b-9937-4c91229717fa" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create OCO" id="ceb9a731-372d-43e1-9f24-6807b1a170b3" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="fc910136-5eed-4dc6-95aa-89282cb1ad98" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmrfqextend" path="cmrfqextend" id="08871988-e256-4044-8026-bd00e7ae95ce">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="60d4ab4a-46d4-479e-aa4c-5eb65e14eeeb">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>Uuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>Uuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="e8314458-3e13-4b0b-8316-d726b4b535d1" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dc0="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmrfqextend/DC0227E43504099FE05316821FAC3251">dc0:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dc0="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmrfqextend/DC0227E43504099FE05316821FAC3251">dc0:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="54b4d4e9-227e-41a2-9549-35a3f8edeed9" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="6001fcfe-74c6-4b00-ad15-409a28d5cd5e" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dbed="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmrfqextend/DBED0CBB3F6846C2E05316821FAC0E25">dbed:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="a6cc11f3-5fe5-44ee-9297-9840d5109c63" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve RFQ Extensions" id="a26f28a6-cf82-4ebf-b8ce-de088eb096f9" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value xsi:nil="true"/>
+          <con:style>QUERY</con:style>
+          <con:default xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>limit</con:name>
+          <con:value xsi:nil="true"/>
+          <con:style>QUERY</con:style>
+          <con:default xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmr="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmrfqextend">cmr:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="d7f264d2-07f1-41c1-b9ab-1011f2c30a99" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create RFQ Extension" id="5e79e1f2-20b7-4dc8-aed1-8c655248bfcf" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cmr="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmrfqextend">cmr:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="d0e9b789-2523-4265-a43d-eead52e4700f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmstatus" path="cmstatus" id="2afe4a99-7789-447e-972a-ca34945beaa4">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="3f2049df-d4a8-4752-97d1-211a3aa226c8">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>Uuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>Uuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="690c78ea-8a7a-4439-9977-0c6857a40ba6" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dbed="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmstatus/DBEDFCC924E81224E05316821FAC90DF">dbed:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dbed="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmstatus/DBEDFCC924E81224E05316821FAC90DF">dbed:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="a3a963ef-8c47-4008-bbda-54b43666000e" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="e074295f-e00e-467c-aa48-550bad68fa6f" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dbed="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmstatus/DBEDFCC924E81224E05316821FAC90DF">dbed:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="a30b388a-3423-4957-9d38-29ffcd177cc0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve PCI Statuses" id="568b2bb5-784a-4c51-b557-634df401befd" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value xsi:nil="true"/>
+          <con:style>QUERY</con:style>
+          <con:default xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmt="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype">cmt:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="08416852-cbd3-41cc-842f-8a7c66b064ce" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create PCI Status" id="fbbf7585-f9ad-4cd6-9498-56c9fe97e03b" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cms="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmstatus">cms:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="edd36d0f-02d3-4226-8a22-66320f7dd385" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmtype" path="cmtype" id="19a4cf1e-dd82-474d-b2c3-2a7819cdaf1d">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="240f5174-b922-49e6-b561-614a7ccd41de">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>VUuid</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>VUuid</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="073bbfd9-e027-443d-aa32-3695823d3b51" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:beb="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype/BEB07440770E2A62E05316821FAC1494">beb:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:beb="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype/BEB07440770E2A62E05316821FAC1494">beb:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="e0ac4960-84b5-4b32-a7d7-f5d0e2128010" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="9f69d958-7c7a-4a7f-8ec7-3f9cebb508d2" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>415</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:beb="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype/BEB07440770E2A62E05316821FAC1494">beb:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="9f0c3658-ea45-47ab-9a92-af358fbffba9" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Delete Specific" id="52211747-570d-4ab0-84b3-3a444132d6b4" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>400 404 500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="43d4d7ef-e614-4f2f-b978-e467514492c1" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve PCI Types" id="0e0dcb50-cc11-4a78-ba7f-87c05c20cf73" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value xsi:nil="true"/>
+          <con:style>QUERY</con:style>
+          <con:default xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmt="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype">cmt:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="26be1ad9-553e-475d-9202-416c4229df98" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create PCI Type" id="e7e34d13-70b5-4c7c-b031-c28786d012fb" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>400 500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>401</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:html</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cmt="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmtype">cmt:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="1eeae73f-0acd-49d8-a00d-b5eaaaf3ba9f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="cmvendordetail" path="cmvendordetail" id="5124c9b0-68ee-427e-bdf1-8983ead9fe92">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{Uuid}" path="{Uuid}" id="23aba67f-5315-49c4-9cf4-cc828a9d7851">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Uuid</con:name>
+          <con:value>RowID</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>RowID</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Retrieve Specific" id="c77709a6-522c-4aeb-a98c-82f70c7080df" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:d49="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmvendordetail/000500000007434D4943494E430000000934303442595041535300000006455854303637000000055741594E450000000150">d49:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:d49="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmvendordetail/000500000007434D4943494E430000000934303442595041535300000006455854303637000000055741594E450000000150">d49:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="d30b3952-27ff-494c-a4ea-a36e6f9fdc4b" mediaType="application/json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="Update Specific" id="200eae81-8c86-42eb-b023-48943fb2a44e" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="FAULT" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status/>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:d49="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmvendordetail/000500000007434D4943494E430000000934303442595041535300000006455854303637000000055741594E450000000150">d49:Response</con:element>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Request 1" id="be38f9bf-c460-4ec5-9924-9969de2bd41f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+          <con:settings/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>NOVATEST</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Retrieve CO SC Vendor Details" id="855c4a8f-c2b6-4fa1-ae48-3cb500fbb7f5" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>finder</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:cmv="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmvendordetail">cmv:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType/>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xmlns:ns="http://wadl.dev.java.net/2009/02">ns:data</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="6d996a38-d0bf-4b7f-8c36-89b081b4e866" mediaType="application/json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+    <con:method name="Create Vendor Detail" id="90820a70-e7e0-4c76-80ee-8730bd67800d" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="REQUEST" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="FAULT" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status/>
+        <con:params/>
+        <con:element xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:representation type="RESPONSE" id="">
+        <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+        <con:status>201</con:status>
+        <con:params/>
+        <con:element xmlns:cmv="https://mobtest.cmiccloudr12.com/cmictestrti/cm-rest-api/rest/1/cmvendordetail">cmv:Response</con:element>
+        <con:description xsi:nil="true"/>
+      </con:representation>
+      <con:request name="Request 1" id="b15d7f46-13c9-4ab9-b7e1-555b80346d86" mediaType="application/vnd.oracle.adf.resourceitem+json">
+        <con:settings/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+</con:resource>

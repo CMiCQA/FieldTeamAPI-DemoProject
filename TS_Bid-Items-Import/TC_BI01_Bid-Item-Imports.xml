@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="aa43eb50-a0df-4206-b313-3327a2f5f6b7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_BI01_Bid Item Imports" searchProperties="true" timeout="0">
+  <con:settings id="86698809-2680-4503-846c-0a3024164979">
+    <con:setting id="aa43eb50-a0df-4206-b313-3327a2f5f6b7fileName">TC_BI01_Bid-Item-Imports</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="6c39a213-5bb5-40bc-81a5-0d4d951361e9">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>1</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>ItemName</PropertyName0>
+          <repetitionCountItemName>0</repetitionCountItemName>
+          <repeatValuesItemName>false</repeatValuesItemName>
+          <PasswordDataGeneratorUseSpacesItemName>false</PasswordDataGeneratorUseSpacesItemName>
+          <PasswordDataGeneratorUsePunctuationMarksItemName>false</PasswordDataGeneratorUsePunctuationMarksItemName>
+          <PasswordDataGeneratorUseLettersItemName>true</PasswordDataGeneratorUseLettersItemName>
+          <PasswordDataGeneratorUseDigitsItemName>false</PasswordDataGeneratorUseDigitsItemName>
+          <PasswordDataGeneratorMaxCharacterCountItemName>10</PasswordDataGeneratorMaxCharacterCountItemName>
+          <PasswordDataGeneratorMinCharacterCountItemName>5</PasswordDataGeneratorMinCharacterCountItemName>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>ItemName</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties" id="9845347f-4075-4d3b-bdb7-d3c7cb862946">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>ItemName</con:name>
+          <con:value>${Data Source#ItemName}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>JobCode</con:name>
+          <con:value>RGTST1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>WmCode</con:name>
+          <con:value>$</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CatCode</con:name>
+          <con:value>1000</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PhsCode</con:name>
+          <con:value>0210</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login" id="3c893de7-0587-4a00-8153-6d7d50573c4d">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET All Bid Item Imports" id="c0019fc2-39cc-41bb-9297-8227ed780843">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/foreignbiditemimport" methodName="Retrieve Bid Item Imports" xsi:type="con:RestRequestStep">
+      <con:restRequest name="GET All Bid Item Imports" id="09b7dae8-2064-47e6-9111-349ba721a053" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/pm-rest-api/rest/1/foreignbiditemimport</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0624240b-d6b7-4424-8da8-4149fad8f1cd" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="b7a930cb-1712-418d-867b-14c51ce5c9f8" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create New Bid Item" id="68c2afdf-f546-4019-8c6d-06ac2884bc0d">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/foreignbiditemimport" methodName="Create Bid Item" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create New Bid Item" id="23839578-2196-4528-82a8-3f525b255794" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "CompCode" : "${Login#Response#$['companyCode']}",\r
+   "ProjCode" : "${Login#Response#$['defaultProjectCode']}",\r
+   "WmCode" : "${Properties#WmCode}",\r
+   "EstQty" : 50,\r
+   "EstPriceAmt" : 100,\r
+   "EstAmt" : 5000,\r
+   "QuotedQty" : 50,\r
+   "QuotedPriceAmt" : 100,\r
+   "QuotedAmt" : 5000,\r
+   "PhsCode" : "${Properties#PhsCode}",\r
+   "CatCode" : "${Properties#CatCode}",\r
+   "JobCode" : "${Properties#JobCode}",\r
+   "PhsWmCode" : "$",\r
+   "Comments" : "API TEST",\r
+   "ToDeleteFlag" : "N",\r
+   "ToValidateFlag" : "N",\r
+   "PmfbiiValid" : "N",\r
+   "PhsQty" : 2,\r
+   "ItemName" : "${Properties#ItemName}",\r
+   "BidItemImpDelFlag" : "",\r
+   "VUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/foreignbiditemimport</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0b6aacfd-ef29-40b6-a796-75d8635b70e4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="69088d8e-9b63-422a-9dfc-9850aad289df" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasink" name="Data Sink" id="b0a58d01-f1f4-4c3c-88a3-1230a3497816">
+    <con:settings/>
+    <con:config xsi:type="con:DataSinkStep">
+      <con:dataSink type="File">
+        <con:configuration>
+          <fileName>Field Team/TestData/DataTransfer/BidItemsDataTransfer.txt</fileName>
+          <separator>,</separator>
+          <escape>"</escape>
+          <quote>true</quote>
+          <trim>true</trim>
+          <append>false</append>
+          <encoding>Cp1252</encoding>
+        </con:configuration>
+      </con:dataSink>
+      <con:properties>
+        <con:property>
+          <con:name>ItemName</con:name>
+          <con:value>${Create New Bid Item#Response#$['ItemName']}</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="183a3050-7025-44f4-9d05-ea57891659ed" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_PM_PunchList Status Negative Tests" searchProperties="true" timeout="0">
+  <con:settings id="4926bf4a-e801-44ac-b23b-fa4a67817523">
+    <con:setting id="183a3050-7025-44f4-9d05-ea57891659edfileName">TC_PM_PunchList-Status-Negative-Tests</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="DynamicDataGenerator" id="cec26838-2b28-4be6-a640-efc4488f77c1">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>6</generatorsTotalNumber>
+          <lastSelectedProperty>5</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>ValidStatusName</PropertyName0>
+          <repetitionCountValidStatusName>0</repetitionCountValidStatusName>
+          <repeatValuesValidStatusName>false</repeatValuesValidStatusName>
+          <PasswordDataGeneratorUseSpacesValidStatusName>false</PasswordDataGeneratorUseSpacesValidStatusName>
+          <PasswordDataGeneratorUsePunctuationMarksValidStatusName>false</PasswordDataGeneratorUsePunctuationMarksValidStatusName>
+          <PasswordDataGeneratorUseLettersValidStatusName>true</PasswordDataGeneratorUseLettersValidStatusName>
+          <PasswordDataGeneratorUseDigitsValidStatusName>false</PasswordDataGeneratorUseDigitsValidStatusName>
+          <PasswordDataGeneratorMaxCharacterCountValidStatusName>6</PasswordDataGeneratorMaxCharacterCountValidStatusName>
+          <PasswordDataGeneratorMinCharacterCountValidStatusName>5</PasswordDataGeneratorMinCharacterCountValidStatusName>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>StatusCode>10Char</PropertyName1>
+          <repetitionCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>0</repetitionCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <repeatValuesStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>false</repeatValuesStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorUseSpacesStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>false</PasswordDataGeneratorUseSpacesStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorUsePunctuationMarksStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>false</PasswordDataGeneratorUsePunctuationMarksStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorUseLettersStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>true</PasswordDataGeneratorUseLettersStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorUseDigitsStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>true</PasswordDataGeneratorUseDigitsStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorMaxCharacterCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>15</PasswordDataGeneratorMaxCharacterCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <PasswordDataGeneratorMinCharacterCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>11</PasswordDataGeneratorMinCharacterCountStatusCodedb370ecfa5c24d1f958a36e5a8ae14a810Char>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>StatusCodeWithSpace</PropertyName2>
+          <repetitionCountStatusCodeWithSpace>0</repetitionCountStatusCodeWithSpace>
+          <repeatValuesStatusCodeWithSpace>false</repeatValuesStatusCodeWithSpace>
+          <PasswordDataGeneratorUseSpacesStatusCodeWithSpace>true</PasswordDataGeneratorUseSpacesStatusCodeWithSpace>
+          <PasswordDataGeneratorUsePunctuationMarksStatusCodeWithSpace>false</PasswordDataGeneratorUsePunctuationMarksStatusCodeWithSpace>
+          <PasswordDataGeneratorUseLettersStatusCodeWithSpace>true</PasswordDataGeneratorUseLettersStatusCodeWithSpace>
+          <PasswordDataGeneratorUseDigitsStatusCodeWithSpace>false</PasswordDataGeneratorUseDigitsStatusCodeWithSpace>
+          <PasswordDataGeneratorMaxCharacterCountStatusCodeWithSpace>10</PasswordDataGeneratorMaxCharacterCountStatusCodeWithSpace>
+          <PasswordDataGeneratorMinCharacterCountStatusCodeWithSpace>5</PasswordDataGeneratorMinCharacterCountStatusCodeWithSpace>
+          <GeneratorType3>STR</GeneratorType3>
+          <PropertyName3>StatusCodeWithSpecialChar</PropertyName3>
+          <repetitionCountStatusCodeWithSpecialChar>0</repetitionCountStatusCodeWithSpecialChar>
+          <repeatValuesStatusCodeWithSpecialChar>false</repeatValuesStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorUseSpacesStatusCodeWithSpecialChar>false</PasswordDataGeneratorUseSpacesStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorUsePunctuationMarksStatusCodeWithSpecialChar>true</PasswordDataGeneratorUsePunctuationMarksStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorUseLettersStatusCodeWithSpecialChar>true</PasswordDataGeneratorUseLettersStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorUseDigitsStatusCodeWithSpecialChar>false</PasswordDataGeneratorUseDigitsStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorMaxCharacterCountStatusCodeWithSpecialChar>10</PasswordDataGeneratorMaxCharacterCountStatusCodeWithSpecialChar>
+          <PasswordDataGeneratorMinCharacterCountStatusCodeWithSpecialChar>5</PasswordDataGeneratorMinCharacterCountStatusCodeWithSpecialChar>
+          <GeneratorType4>STR</GeneratorType4>
+          <PropertyName4>StatusName>30Char</PropertyName4>
+          <repetitionCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>0</repetitionCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <repeatValuesStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>false</repeatValuesStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorUseSpacesStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>false</PasswordDataGeneratorUseSpacesStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorUsePunctuationMarksStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>false</PasswordDataGeneratorUsePunctuationMarksStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorUseLettersStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>true</PasswordDataGeneratorUseLettersStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorUseDigitsStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>false</PasswordDataGeneratorUseDigitsStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorMaxCharacterCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>35</PasswordDataGeneratorMaxCharacterCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <PasswordDataGeneratorMinCharacterCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>31</PasswordDataGeneratorMinCharacterCountStatusNamedb370ecfa5c24d1f958a36e5a8ae14a830Char>
+          <GeneratorType5>STR</GeneratorType5>
+          <PropertyName5>ValidStatusCode</PropertyName5>
+          <repetitionCountValidStatusCode>0</repetitionCountValidStatusCode>
+          <repeatValuesValidStatusCode>false</repeatValuesValidStatusCode>
+          <PasswordDataGeneratorUseSpacesValidStatusCode>false</PasswordDataGeneratorUseSpacesValidStatusCode>
+          <PasswordDataGeneratorUsePunctuationMarksValidStatusCode>false</PasswordDataGeneratorUsePunctuationMarksValidStatusCode>
+          <PasswordDataGeneratorUseLettersValidStatusCode>true</PasswordDataGeneratorUseLettersValidStatusCode>
+          <PasswordDataGeneratorUseDigitsValidStatusCode>true</PasswordDataGeneratorUseDigitsValidStatusCode>
+          <PasswordDataGeneratorMaxCharacterCountValidStatusCode>10</PasswordDataGeneratorMaxCharacterCountValidStatusCode>
+          <PasswordDataGeneratorMinCharacterCountValidStatusCode>5</PasswordDataGeneratorMinCharacterCountValidStatusCode>
+          <escapeSpaceSequence>db370ecfa5c24d1f958a36e5a8ae14a8</escapeSpaceSequence>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>ValidStatusName</con:property>
+      <con:property>ValidStatusCode</con:property>
+      <con:property>StatusCode>10Char</con:property>
+      <con:property>StatusCodeWithSpace</con:property>
+      <con:property>StatusCodeWithSpecialChar</con:property>
+      <con:property>StatusName>30Char</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="DataDriven_Input" id="d07f109a-4782-4cb5-90eb-544d32b2b97c">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Grid">
+        <con:configuration>
+          <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#StatusCode>10Char}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusName}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#StatusCodeWithSpace}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusName}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#StatusCodeWithSpecialChar}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusName}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusName}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#ValidStatusCode}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">${DynamicDataGenerator#StatusName>30Char}</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <recognizeAsPlainText>false</recognizeAsPlainText>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Status Code</con:property>
+      <con:property>Status Name</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get All PunchList Status" id="88b3f5e4-d717-4b41-9364-c295ebcea685">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmpunchliststatus" methodName="Retrieve Punch List Statuses" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All PunchList Status" id="2c092129-ec71-4135-9932-4ce670dece87" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmpunchliststatus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="639da54a-b686-4d74-8b5f-48526ce35f7d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="bf3c10ee-00cc-417e-8225-4dac88e29f8b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create New Punch List Status Code" id="75b5aeeb-2916-4e41-bdb8-c8514727430b">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmpunchliststatus" methodName="Create Status" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create New Punch List Status Code" id="2a244312-45ab-4901-ad9c-e6b94582d023" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{\r
+   "PmplsStatusClassCode" : "s",\r
+   "PmplsStatusCode" : "${DataDriven_Input#Status Code}",\r
+   "PmplsStatusName" : "${DataDriven_Input#Status Name}",\r
+   "PmplsVUuid" : ""\r
+}</con:request>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/pm-rest-api/rest/1/pmpunchliststatus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4e3490af-78dc-45cb-bca0-32bd65598e50" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400,500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="8e4b0f08-129c-4e3d-80da-491f59cf626e" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="500" id="0e4fd3c0-287d-488e-a2d5-17a95713a16b">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataDriven_Loop" id="52c8778b-fcaf-434e-8580-60a138692a38">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataDriven_Input</dataSourceStep>
+      <targetStep>Get All PunchList Status</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="9d949f9e-8400-409a-8639-9b09a4926140" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

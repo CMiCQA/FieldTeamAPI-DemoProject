@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="projectchecklist" path="cmic-field-rest-api/rest/1/projectchecklisthdrcmmn" id="0e5490d4-a12b-4778-9800-3b05f9577757">
+  <con:settings id="63ce5e4e-7b5c-4541-904f-9f412245d92f">
+    <con:setting id="0e5490d4-a12b-4778-9800-3b05f9577757fileName">projectchecklist</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>offset</con:name>
+      <con:value>0</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>0</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>limit</con:name>
+      <con:value>25</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>25</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>totalResults</con:name>
+      <con:value>false</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>false</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>orderBy</con:name>
+      <con:value>PmcDate:desc</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>PmcDate:desc</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>onlyData</con:name>
+      <con:value>true</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>true</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>finder</con:name>
+      <con:value>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:resource name="ChecklistValueProj" path="C0F680A6C88D0C66E053508010AC739F/child/ChecklistValueProj" id="9f68a877-1f29-4ea5-8251-66bd5a22ea2e">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="RelatedDocumentView" path="C0F677F015D33CF4E053508010ACAFC9/child/RelatedDocumentView" id="29b48b16-8e1a-4741-bd00-1637577f4b90">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="9d3b27af-6113-4a85-aa3e-99b2c32058ac" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>offset</con:name>
+            <con:value>0</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>0</con:default>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>limit</con:name>
+            <con:value>25</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>25</con:default>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>totalResults</con:name>
+            <con:value>false</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>false</con:default>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>orderBy</con:name>
+            <con:value>PmcDate:desc</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>PmcDate:desc</con:default>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>onlyData</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>finder</con:name>
+            <con:value>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Request 1" id="3564d007-0c94-4400-bac5-c8aeac296b48" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+              <con:authProfile>UPG</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+              <con:authProfile>QADAILY</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+              <con:authProfile>QADAILY2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+              <con:authProfile>QALATEST</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:method name="Method 1" id="0cb6eebe-16b9-4596-bb95-383a37fc9cd7" method="POST">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>offset</con:name>
+          <con:value>0</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>0</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>limit</con:name>
+          <con:value>25</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>25</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>totalResults</con:name>
+          <con:value>false</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>false</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>orderBy</con:name>
+          <con:value>PmcDate:desc</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>PmcDate:desc</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>onlyData</con:name>
+          <con:value>true</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>true</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>finder</con:name>
+          <con:value>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:request name="Request 1" id="07302b0a-44e0-4172-93fc-670c964e8321" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="8c86e271-b3e7-43f2-908a-40452ef9de1a" path="8c86e271-b3e7-43f2-908a-40452ef9de1a" id="bd00b247-c760-4b13-a291-52238a3562bc">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="4d301dc7-954d-46bf-af38-c8baddcc2c33" method="PATCH">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>offset</con:name>
+          <con:value>0</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>0</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>limit</con:name>
+          <con:value>25</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>25</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>totalResults</con:name>
+          <con:value>false</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>false</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>orderBy</con:name>
+          <con:value>PmcDate:desc</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>PmcDate:desc</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>onlyData</con:name>
+          <con:value>true</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>true</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>finder</con:name>
+          <con:value>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:request name="Request 1" id="cf00bb52-bf72-47e5-9575-6fa3f5946dba" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:resource name="RelatedDocumentView" path="TX25kIVksKgyO6QxvbJxcQ2CGrB8p8VrQcVK9HOLgh7lhG79ADSQkTax7JNL/child/RelatedDocumentView" id="85d21dcf-bbae-49cb-abd2-3565ebc94d24">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="de98e083-98ea-4130-aa15-e9e04febef80" method="POST">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>offset</con:name>
+          <con:value>0</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>0</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>limit</con:name>
+          <con:value>25</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>25</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>totalResults</con:name>
+          <con:value>false</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>false</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>orderBy</con:name>
+          <con:value>PmcDate:desc</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>PmcDate:desc</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>onlyData</con:name>
+          <con:value>true</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>true</con:default>
+        </con:parameter>
+        <con:parameter required="true">
+          <con:name>finder</con:name>
+          <con:value>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>filterbyproject;projUuid=F75BE9A5742D9103E05327261DAC371A</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:request name="Request 1" id="a72e2e12-3b21-4eeb-97af-1dbd6a7a653e" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>QALATEST</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:method name="Method 1" id="6c93ece4-22e6-47ec-89f3-09547a6573c1" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/vnd.oracle.adf.resourcecollection+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="FAULT" id="">
+      <con:mediaType/>
+      <con:status>500 522</con:status>
+      <con:params/>
+      <con:element xsi:nil="true"/>
+      <con:description xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="c4a4fee2-6cf3-46f1-800c-050d45d172d8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+          <con:authProfile>UPG</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+          <con:authProfile>QADAILY</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+          <con:authProfile>QADAILY2</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+          <con:authProfile>QALATEST</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

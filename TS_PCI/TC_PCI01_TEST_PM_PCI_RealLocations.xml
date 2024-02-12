@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="7d6b14ad-9209-41fd-b3e0-c7983f8e6194" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_PCI01_TEST_PM_PCI_RealLocations" searchProperties="true" timeout="0">
+  <con:settings id="5b42a8be-39ec-4efa-8d01-31b6019a917e">
+    <con:setting id="2a2a608c-d5be-4a12-87e4-6a97b018493bfileName">TC_PCI01_TEST_PM_PCI_RealLocations</con:setting>
+    <con:setting id="7d6b14ad-9209-41fd-b3e0-c7983f8e6194fileName">TC_PCI01_TEST_PM_PCI_RealLocations</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Get All Locations" id="48ea8263-8ab9-4859-831a-5ef39b6a0267">
+    <con:settings/>
+    <con:config service="All Webservices" resourcePath="/pm-rest-api/rest/1/pmpcirealloc" methodName="Retrieve PCI Real Locations" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Locations" id="4b58338b-f2a6-4eb1-aa48-a00711a37b17" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/pm-rest-api/rest/1/pmpcirealloc</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b6002422-4eb0-4163-9f7e-89d1ad520d92" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c1ade9b6-c571-4fd3-a3e1-ab5d507c0c41" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>NOVATEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="b0b5c1ef-d1f6-4a87-b82f-2f88adc44c93" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

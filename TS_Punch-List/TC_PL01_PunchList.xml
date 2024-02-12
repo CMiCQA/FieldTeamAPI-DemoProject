@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="bc6765eb-0435-44c1-afd6-bd42679bda98" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_PL01_PunchList" searchProperties="true" timeout="0">
+  <con:settings id="00bb8be9-23fd-4bff-b206-c4a8d2f80a87">
+    <con:setting id="bc6765eb-0435-44c1-afd6-bd42679bda98fileName">TC_PL01_PunchList</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Login" id="82b69334-40a7-40ad-9c94-60cf5361448d">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="Data Source" id="2397a1a5-3d7d-4e4a-aa15-ff1cec75b829">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>6</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>VUuid</PropertyName0>
+          <repetitionCountVUuid>0</repetitionCountVUuid>
+          <repeatValuesVUuid>false</repeatValuesVUuid>
+          <PasswordDataGeneratorUseSpacesVUuid>false</PasswordDataGeneratorUseSpacesVUuid>
+          <PasswordDataGeneratorUsePunctuationMarksVUuid>false</PasswordDataGeneratorUsePunctuationMarksVUuid>
+          <PasswordDataGeneratorUseLettersVUuid>true</PasswordDataGeneratorUseLettersVUuid>
+          <PasswordDataGeneratorUseDigitsVUuid>true</PasswordDataGeneratorUseDigitsVUuid>
+          <PasswordDataGeneratorMaxCharacterCountVUuid>60</PasswordDataGeneratorMaxCharacterCountVUuid>
+          <PasswordDataGeneratorMinCharacterCountVUuid>5</PasswordDataGeneratorMinCharacterCountVUuid>
+          <GeneratorType1>STR</GeneratorType1>
+          <PropertyName1>PMPLCODE</PropertyName1>
+          <repetitionCountPMPLCODE>0</repetitionCountPMPLCODE>
+          <repeatValuesPMPLCODE>false</repeatValuesPMPLCODE>
+          <PasswordDataGeneratorUseSpacesPMPLCODE>false</PasswordDataGeneratorUseSpacesPMPLCODE>
+          <PasswordDataGeneratorUsePunctuationMarksPMPLCODE>false</PasswordDataGeneratorUsePunctuationMarksPMPLCODE>
+          <PasswordDataGeneratorUseLettersPMPLCODE>true</PasswordDataGeneratorUseLettersPMPLCODE>
+          <PasswordDataGeneratorUseDigitsPMPLCODE>true</PasswordDataGeneratorUseDigitsPMPLCODE>
+          <PasswordDataGeneratorMaxCharacterCountPMPLCODE>7</PasswordDataGeneratorMaxCharacterCountPMPLCODE>
+          <PasswordDataGeneratorMinCharacterCountPMPLCODE>4</PasswordDataGeneratorMinCharacterCountPMPLCODE>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>pmplorseq</PropertyName2>
+          <repetitionCountpmplorseq>0</repetitionCountpmplorseq>
+          <repeatValuespmplorseq>false</repeatValuespmplorseq>
+          <PasswordDataGeneratorUseSpacespmplorseq>false</PasswordDataGeneratorUseSpacespmplorseq>
+          <PasswordDataGeneratorUsePunctuationMarkspmplorseq>false</PasswordDataGeneratorUsePunctuationMarkspmplorseq>
+          <PasswordDataGeneratorUseLetterspmplorseq>false</PasswordDataGeneratorUseLetterspmplorseq>
+          <PasswordDataGeneratorUseDigitspmplorseq>true</PasswordDataGeneratorUseDigitspmplorseq>
+          <PasswordDataGeneratorMaxCharacterCountpmplorseq>10</PasswordDataGeneratorMaxCharacterCountpmplorseq>
+          <PasswordDataGeneratorMinCharacterCountpmplorseq>5</PasswordDataGeneratorMinCharacterCountpmplorseq>
+          <GeneratorType3>STR</GeneratorType3>
+          <PropertyName3>VUid_Updated</PropertyName3>
+          <repetitionCountVUid_Updated>0</repetitionCountVUid_Updated>
+          <repeatValuesVUid_Updated>false</repeatValuesVUid_Updated>
+          <PasswordDataGeneratorUseSpacesVUid_Updated>false</PasswordDataGeneratorUseSpacesVUid_Updated>
+          <PasswordDataGeneratorUsePunctuationMarksVUid_Updated>false</PasswordDataGeneratorUsePunctuationMarksVUid_Updated>
+          <PasswordDataGeneratorUseLettersVUid_Updated>true</PasswordDataGeneratorUseLettersVUid_Updated>
+          <PasswordDataGeneratorUseDigitsVUid_Updated>true</PasswordDataGeneratorUseDigitsVUid_Updated>
+          <PasswordDataGeneratorMaxCharacterCountVUid_Updated>60</PasswordDataGeneratorMaxCharacterCountVUid_Updated>
+          <PasswordDataGeneratorMinCharacterCountVUid_Updated>5</PasswordDataGeneratorMinCharacterCountVUid_Updated>
+          <GeneratorType4>STR</GeneratorType4>
+          <PropertyName4>pmplorseq_updated</PropertyName4>
+          <repetitionCountpmplorseq_updated>0</repetitionCountpmplorseq_updated>
+          <repeatValuespmplorseq_updated>false</repeatValuespmplorseq_updated>
+          <PasswordDataGeneratorUseSpacespmplorseq_updated>false</PasswordDataGeneratorUseSpacespmplorseq_updated>
+          <PasswordDataGeneratorUsePunctuationMarkspmplorseq_updated>false</PasswordDataGeneratorUsePunctuationMarkspmplorseq_updated>
+          <PasswordDataGeneratorUseLetterspmplorseq_updated>false</PasswordDataGeneratorUseLetterspmplorseq_updated>
+          <PasswordDataGeneratorUseDigitspmplorseq_updated>true</PasswordDataGeneratorUseDigitspmplorseq_updated>
+          <PasswordDataGeneratorMaxCharacterCountpmplorseq_updated>10</PasswordDataGeneratorMaxCharacterCountpmplorseq_updated>
+          <PasswordDataGeneratorMinCharacterCountpmplorseq_updated>5</PasswordDataGeneratorMinCharacterCountpmplorseq_updated>
+          <GeneratorType5>STR</GeneratorType5>
+          <PropertyName5>PMPLCODE_updated</PropertyName5>
+          <repetitionCountPMPLCODE_updated>0</repetitionCountPMPLCODE_updated>
+          <repeatValuesPMPLCODE_updated>false</repeatValuesPMPLCODE_updated>
+          <PasswordDataGeneratorUseSpacesPMPLCODE_updated>false</PasswordDataGeneratorUseSpacesPMPLCODE_updated>
+          <PasswordDataGeneratorUsePunctuationMarksPMPLCODE_updated>false</PasswordDataGeneratorUsePunctuationMarksPMPLCODE_updated>
+          <PasswordDataGeneratorUseLettersPMPLCODE_updated>true</PasswordDataGeneratorUseLettersPMPLCODE_updated>
+          <PasswordDataGeneratorUseDigitsPMPLCODE_updated>true</PasswordDataGeneratorUseDigitsPMPLCODE_updated>
+          <PasswordDataGeneratorMaxCharacterCountPMPLCODE_updated>10</PasswordDataGeneratorMaxCharacterCountPMPLCODE_updated>
+          <PasswordDataGeneratorMinCharacterCountPMPLCODE_updated>5</PasswordDataGeneratorMinCharacterCountPMPLCODE_updated>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>VUuid</con:property>
+      <con:property>PMPLCODE</con:property>
+      <con:property>pmplorseq</con:property>
+      <con:property>VUid_Updated</con:property>
+      <con:property>PMPLCODE_updated</con:property>
+      <con:property>pmplorseq_updated</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create PunchList" id="e3704a50-2e5f-4cd6-bb4e-a4a66737115a">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/punchlists" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create PunchList" id="990f40b6-533f-47c1-8b34-a2ce47f3a7fd" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmplCompCode" : "${Login#Response#$['companyCode']}",\r
+   "PmplProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmplCode" : "${Data Source#PMPLCODE}",\r
+   "PmplTitle" : "API TESTING1",\r
+   "PmplFromPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmplFromContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmplDesc" : "API Testing25512",\r
+   "PmplToContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmplToPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "VUuid" : "${Data Source#VUuid}",\r
+   "PmplToPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmplFromPartnCode" : "${Login#Response#$['partnerCode']}"\r
+}</con:request>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/rest/1/punchlists</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6850e4bd-a40b-4e88-a408-e844dc1136b4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="37954c9e-0ddf-4e68-a29f-247e74d387f9" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update PunchList" id="cca39ae9-00a8-44ba-a507-3551538d2d96">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Method 1" resourcePath="/cmic-field-rest-api/rest/1/punchlists/{PUNCHLISTUUID}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Update PunchList" id="981204dd-42e8-49b0-a1f6-811120dc6525" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmplCompCode" : "${Create PunchList#Response#$['PmplCompCode']}",\r
+   "PmplProjOraseq" : "${Create PunchList#Response#$['PmplProjOraseq']}",\r
+   "PmplTitle" : " Punchlist",\r
+   "PmplCode" : "${Data Source#PMPLCODE_updated}",\r
+   "PmplFromPartnCode" : "${Create PunchList#Response#$['PmplFromPartnCode']}",\r
+   "PmplFromPartnTypeCode" : "${Create PunchList#Response#$['PmplFromPartnTypeCode']}",\r
+   "PmplFromContactCode" : "${Create PunchList#Response#$['PmplFromContactCode']}",\r
+   "PmplDesc" : "TEST",\r
+   "PmplToContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmplToPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmplToPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "VUuid" : "${Data Source#VUid_Updated}"\r
+}</con:request>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/rest/1/punchlists/smG%20%3B0%3B8%20%20I%2C%20yn%20VB9iEGa%21%20i%3F%21%20zp%205%20%20%20th</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6d83925a-26c3-42ed-9f51-ad00415bd1d6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="92985d54-0e9e-4b88-aa50-63080f73c325" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="PUNCHLISTUUID" value="${Create PunchList#Response#$['VUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete PunchList" id="7c73e505-8537-464f-a235-f3f4d6fc6ee9">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Method 2" resourcePath="/cmic-field-rest-api/rest/1/punchlists/{PUNCHLISTUUID}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Delete PunchList" id="9d2ffb35-7269-403a-88fd-38a708a198cf" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily2/cmic-field-rest-api/rest/1/punchlists/Dm7phO6nP2S8GTSbilab3VNcfxjrarktYvAqx46MfcKm2Me13GTDJ</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f0855eeb-37ee-4122-9cb2-156377454b42" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e04bdff3-96ef-4c52-a6b1-f9c0e6834bc9" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="PUNCHLISTUUID" value="${Update PunchList#Response#$['VUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="PostResultsToTestRail" id="827037c1-f720-438b-8a1a-98b6aabc6fa1" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

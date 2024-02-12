@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="bcb139b4-a781-46ab-a07b-b3cafaeb62e6" name="TS_RFI">
+  <con:description id="d4538a0f-ca60-425e-ac46-f24d898d737d">The user can create an RFI through API. Users can add and Delete Notes, Sub Note, or -reviewers through API</con:description>
+  <con:settings id="92ba1465-9139-4a42-a274-e49c912db469">
+    <con:setting id="bcb139b4-a781-46ab-a07b-b3cafaeb62e6fileName">TS_RFI</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>RFIStatusCode</con:name>
+      <con:value>PENDING</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="0a932e20-d755-4748-aef3-be94f65a18b4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC_A01_Annotation" searchProperties="true" timeout="0">
+  <con:settings id="8723eeac-cf5e-4c9b-bdf5-20b9f5c84da1">
+    <con:setting id="0a932e20-d755-4748-aef3-be94f65a18b4fileName">TC_A01_Annotation</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="7754415a-2afa-451d-b6b8-6bfaba09b046">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>1</generatedDataCount>
+          <generatorsTotalNumber>4</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>STR</GeneratorType0>
+          <PropertyName0>VUuid</PropertyName0>
+          <repetitionCountVUuid>0</repetitionCountVUuid>
+          <repeatValuesVUuid>false</repeatValuesVUuid>
+          <PasswordDataGeneratorUseSpacesVUuid>false</PasswordDataGeneratorUseSpacesVUuid>
+          <PasswordDataGeneratorUsePunctuationMarksVUuid>false</PasswordDataGeneratorUsePunctuationMarksVUuid>
+          <PasswordDataGeneratorUseLettersVUuid>true</PasswordDataGeneratorUseLettersVUuid>
+          <PasswordDataGeneratorUseDigitsVUuid>true</PasswordDataGeneratorUseDigitsVUuid>
+          <PasswordDataGeneratorMaxCharacterCountVUuid>60</PasswordDataGeneratorMaxCharacterCountVUuid>
+          <PasswordDataGeneratorMinCharacterCountVUuid>5</PasswordDataGeneratorMinCharacterCountVUuid>
+          <GeneratorType1>TIME</GeneratorType1>
+          <PropertyName1>CurrentDate</PropertyName1>
+          <repetitionCountCurrentDate>0</repetitionCountCurrentDate>
+          <repeatValuesCurrentDate>false</repeatValuesCurrentDate>
+          <DateTimeDataGeneratorCustomFormatCurrentDate>YYYY-MM-DD</DateTimeDataGeneratorCustomFormatCurrentDate>
+          <DateTimeDataGeneratorFormatCurrentDate>Custom</DateTimeDataGeneratorFormatCurrentDate>
+          <DateTimeDataGeneratorIsSequentCurrentDate>true</DateTimeDataGeneratorIsSequentCurrentDate>
+          <DateTimeDataGeneratorStepDaysCurrentDate>1</DateTimeDataGeneratorStepDaysCurrentDate>
+          <DateTimeDataGeneratorStepHoursCurrentDate>1</DateTimeDataGeneratorStepHoursCurrentDate>
+          <DateTimeDataGeneratorStepMinsCurrentDate>1</DateTimeDataGeneratorStepMinsCurrentDate>
+          <DateTimeDataGeneratorStepSecondsCurrentDate>1</DateTimeDataGeneratorStepSecondsCurrentDate>
+          <DateTimeDataGeneratorMinDateCurrentDate>1706513397844</DateTimeDataGeneratorMinDateCurrentDate>
+          <DateTimeDataGeneratorMaxDateCurrentDate>1706513397844</DateTimeDataGeneratorMaxDateCurrentDate>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>PmanName</PropertyName2>
+          <repetitionCountPmanName>0</repetitionCountPmanName>
+          <repeatValuesPmanName>false</repeatValuesPmanName>
+          <PasswordDataGeneratorUseSpacesPmanName>false</PasswordDataGeneratorUseSpacesPmanName>
+          <PasswordDataGeneratorUsePunctuationMarksPmanName>false</PasswordDataGeneratorUsePunctuationMarksPmanName>
+          <PasswordDataGeneratorUseLettersPmanName>true</PasswordDataGeneratorUseLettersPmanName>
+          <PasswordDataGeneratorUseDigitsPmanName>true</PasswordDataGeneratorUseDigitsPmanName>
+          <PasswordDataGeneratorMaxCharacterCountPmanName>20</PasswordDataGeneratorMaxCharacterCountPmanName>
+          <PasswordDataGeneratorMinCharacterCountPmanName>10</PasswordDataGeneratorMinCharacterCountPmanName>
+          <GeneratorType3>STR</GeneratorType3>
+          <PropertyName3>PmanVUuid</PropertyName3>
+          <repetitionCountPmanVUuid>0</repetitionCountPmanVUuid>
+          <repeatValuesPmanVUuid>false</repeatValuesPmanVUuid>
+          <PasswordDataGeneratorUseSpacesPmanVUuid>false</PasswordDataGeneratorUseSpacesPmanVUuid>
+          <PasswordDataGeneratorUsePunctuationMarksPmanVUuid>false</PasswordDataGeneratorUsePunctuationMarksPmanVUuid>
+          <PasswordDataGeneratorUseLettersPmanVUuid>true</PasswordDataGeneratorUseLettersPmanVUuid>
+          <PasswordDataGeneratorUseDigitsPmanVUuid>true</PasswordDataGeneratorUseDigitsPmanVUuid>
+          <PasswordDataGeneratorMaxCharacterCountPmanVUuid>60</PasswordDataGeneratorMaxCharacterCountPmanVUuid>
+          <PasswordDataGeneratorMinCharacterCountPmanVUuid>10</PasswordDataGeneratorMinCharacterCountPmanVUuid>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>VUuid</con:property>
+      <con:property>CurrentDate</con:property>
+      <con:property>PmanName</con:property>
+      <con:property>PmanVUuid</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties" id="7944cef0-0b50-48f0-bf6e-4bef9316477a">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>VUUID</con:name>
+          <con:value>${Data Source#VUUID}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>CurrentDate</con:name>
+          <con:value>${Data Source#CurrentDate}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PmanName</con:name>
+          <con:value>${Data Source#PmanName}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PmanVUuid</con:name>
+          <con:value>${Data Source#PmanVUuid}</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login" id="da2cf1ab-0e62-4a7e-8475-afa988622d8b">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" methodName="Login" resourcePath="/cmic-field-rest-api/jersey/v1/login/{cmic-env}" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Login" id="dd3deeb3-b92e-4688-bae8-3c451e379e74" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://nova-mobile-test.cmiccloud.com/cmictestnew/cmic-field-rest-api/jersey/v1/login/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="748beaf4-c442-470d-b2d0-17f69ffd6671" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6389098b-38c2-45de-9085-2117c1c02304" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Download Annotation Related Objects" id="e2d870f0-e3d5-4a93-8023-645cd81296ea">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/annotationrelatedobjects" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Download Annotation Related Objects" id="6a533c24-99b8-4929-8f03-f7bf458973f0" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/annotationrelatedobjects</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5d7bf99b-ec2b-4ac9-bebf-34adf81f78f3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="88a8fe18-5a57-4115-863c-4d6a2b9b056e" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="filterbyproject;projUuid=${Login#Response#$['defaultProjectUuid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Retrieve Drawing Documents By Project" id="deae3164-2bc5-4c4f-840c-4fa5ad63050f">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/documents" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Retrieve Drawing Documents By Project" id="a3700408-203c-477a-bf29-15fa97fe38b7" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/rest/1/documents</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d70bc889-b57b-4eb9-a820-d06367f3f5ab" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectbyproject;typeCode=DRAWMGMT,docFileType=,revision=latest,sortBy=&quot;Discipline:asc&quot;,projOraseq=${Login#Response#$['defaultProjectOraseq']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Create New Document Record" id="e7a5ff33-68e9-466c-9ee8-57c097ab4a70">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/jersey/v1/documents" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Create New Document Record" id="51dc821f-504e-4d31-a4da-1c8110a60f7a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmdCompCode" : "${Login#Response#$['companyCode']}",\r
+   "PmdContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmdMpowerUser" : "${CPM Retrieve Drawing Documents By Project#Response#$['items'][0]['PmdMpowerUser']}",\r
+   "PmdPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmdPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmdProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmdStatusCode" : null,\r
+   "PmdTitle" : "${CPM Retrieve Drawing Documents By Project#Response#$['items'][0]['PmdTitle']}",\r
+   "PmdTypeCode" : "${CPM Retrieve Drawing Documents By Project#Response#$['items'][0]['PmdTypeCode']}",\r
+   "VUuid" : "${CPM Retrieve Drawing Documents By Project#Response#$['items'][0]['VUuid']}"\r
+}</con:request>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/jersey/v1/documents</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d2573353-68ef-4060-99d6-6aa2c68bcbd0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201, 200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d8081fa7-adc4-42be-ab40-1a06a7dec135" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Retrieve Next Revision Of A Document" id="8cb04124-6ace-4f23-9702-6293694f7942">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/documents/{UUID}/child/DocRevisionView" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Retrieve Next Revision Of A Document" id="8a6ca69f-0607-4ff0-9866-7973a2d587de" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/documents/1234567/child/DocRevisionView</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="2c4a2d79-a42b-4386-b654-16da6bc38587" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="68c03df7-67a4-4955-b2fe-3290cd25af30" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="UUID" value="${CPM Create New Document Record#Response#$['DocRevisionView'][0]['PmdrDocVUuid']}"/>
+          <con:entry key="finder" value="previousRevision;revisionNum=1"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Create Revision Record Copy" id="9d68edbf-bb9b-4c3d-921b-f97105c59491">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/jersey/v1/revisions" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Create Revision Record Copy" id="068e8387-0956-4a40-980a-06e155ed3495" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmdrComment" : "API UPDATED Version",\r
+   "PmdrContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmdrPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmdrPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmdrRevDate" : "${Properties#CurrentDate}T15:46:40.000-04:00",\r
+   "PmdrRevUser" : "${CPM Retrieve Next Revision Of A Document#Response#$['items'][0]['PmdrRevUser']}",\r
+   "VUuid" : "${Properties#VUUID}",\r
+   "PmdrAttPath" : "RJ2.jpg",\r
+   "PmdrDocVUuid" : "${CPM Retrieve Next Revision Of A Document#Response#$['items'][0]['PmdrDocVUuid']}"\r
+}</con:request>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/jersey/v1/revisions</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c25f872e-8372-4b75-9030-18797f249cba" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201, 200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="71747e72-eed1-421b-a141-6c9c82bdbaf8" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Create an Annotation Record" id="2cc1754a-c507-406b-a698-b83c96ddda87">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/annotations" methodName="Annotations 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Create an Annotation Record" id="4cdfcb84-0e77-4079-9469-c6c15b5833dd" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request>{\r
+   "PmanContentFilename" : "test.xfdf",\r
+   "PmanCreationDate" : "2019-07-10T18:38:23-04:00",\r
+   "PmanCreationRevNum" : 0,\r
+   "PmanCreatorContactCode" : "${Login#Response#$['contactCode']}",\r
+   "PmanCreatorId" : "${Login#Response#$['contactCode']}",\r
+   "PmanCreatorPartnCode" : "${Login#Response#$['partnerCode']}",\r
+   "PmanCreatorPartnTypeCode" : "${Login#Response#$['partnerTypeCode']}",\r
+   "PmanDocOraseq" : "${CPM Retrieve Next Revision Of A Document#Response#$['items'][0]['PmdrDocOraseq']}",\r
+   "PmanHideAsOfRevNum" : "-1",\r
+   "PmanDocVUuid" : "${CPM Create Revision Record Copy#Response#$['PmdrDocVUuid']}",\r
+   "PmanName" : "${Properties#PmanName}",\r
+   "PmanProjOraseq" : "${Login#Response#$['defaultProjectOraseq']}",\r
+   "PmanVUuid" : "${Data Source#PmanVUuid}"\r
+}</con:request>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/annotations</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="07e5fcb8-9d38-4afb-844b-c4caf7d08e54" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="ea2a3f96-bf3b-4d35-9d7c-3fd37ea19490" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Upload Annotation FIle" id="b46c6955-faf1-4d5e-8f60-b25a750392ad" disabled="true">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/jersey/v1/annotations?content-file-name=test.xfdf" methodName="Annotations" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Upload Annotation FIle" id="ae6b9e2f-8e81-4760-84b8-3aa879d9ab1f" mediaType="multipart/form-data" postQueryString="true">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qalatestmob.cmicpaas.com/cmicqalatest/cmic-field-rest-api/jersey/v1/annotations</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0395f113-03ff-4797-a872-d69fc2fa5a76" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f9eb5003-abef-4bf2-bb53-df3df6a6578f" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:attachment>
+          <con:name>01HP3M5XF2EWG6ADGPEV1SZTHT.xfdf</con:name>
+          <con:contentType>application/octet-stream</con:contentType>
+          <con:size>792</con:size>
+          <con:contentId>01HP3M5XF2EWG6ADGPEV1SZTHT.xfdf</con:contentId>
+          <con:data>UEsDBBQACAgIAAoxSFgAAAAAAAAAAAAAAAAfAAAAMDFIUDNNNVhGMkVXRzZBREdQRVYxU1pUSFQueGZkZm1SXU/bMBR9n7T/YHmvNP5IUidVEpTSBpg0qRqMTbyZxGktJXaIDS3/fjelDA3hJ99zz/0+2fmh79CzGp22JscsoBgpU9tGm22Of91WswSfF1+/ZIe2aRFwF26QtcrxMCqnxmeFJ9C4HO+8HxaEGBfIxj6ooLY9mYIILjJpjPWuyNzjkxwVqm1nxxx/qxIeUShYj0p6qN9ID5lXC04B5zShcZREyT1GnzliAY62k1s3NaONx8jIHmiUXW3CH/Gfiq9/X87L1eVmfcdu7m+vbjEa5HZiwMcNTTvrlXRPo+qV8ZtR1fq0BJJ8QripZQexDGmDcsRQCwUhxudYhDxgfB5G4RmjXASCxiHnZ4zFNIABeAw4m4uAxSIJBUbOv0yZnO10g5HXfrJ+yl4a9F1qg9FeN36X4zCgxwcLrK3x0IMrGEOMRMg9Qv2M/IPhQG//2ajrnVcHX2QPtnn5cJ79fh/sw8COW8LSNCWHne+70w0Xh1b+RwT7yHT1TvUSrilncAlJQCUEYlq5KDfXd2/aKevRPki/YOCGfbwS3KDqHHNAOIwxfOh/KDIyNVm8j/LePsxEXgUD7pOCANONQz3os9WqyXFU0pKn63KdRjxJxUWZijVYIqqqZD4XJUZ21FttZJfjZcWjiiU0TcIwpAmLQkEvRFWKeRwtV8slJseak2iLv1BLBwgBZ5llAQIAABgDAABQSwECFAAUAAgICAAKMUhYAWeZZQECAAAYAwAAHwAAAAAAAAAAAAAAAAAAAAAAMDFIUDNNNVhGMkVXRzZBREdQRVYxU1pUSFQueGZkZlBLBQYAAAAAAQABAE0AAABOAgAAAAA=</con:data>
+          <con:id>36fe5833-69b1-42cf-9fd0-9c453c71e1ae</con:id>
+        </con:attachment>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-file-name" value="C:/Users/Administrator/Documents/01HP3M5XF2EWG6ADGPEV1SZTHT.xfdf"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Download Annotations for given Location code and Trade name per project" id="b42914df-0c47-43cc-899e-d8a7397ebb4b">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/annotations" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Download Annotations for given Location code and Trade name per project" id="dc2b47b8-b624-4b95-b022-a086c45573d6" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/annotations</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3e34f60b-fd47-4d80-8200-d957594cef31" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f732c486-cd9b-4969-98b1-84f9f622be11" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectbyproject;projUuid=${Login#Response#$['defaultProjectUuid']},docLocationCode=A,docTradeName=Electrical"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CPM Download Annotation Related Objects filter by Location Code and Trade Name" id="85e9aa1b-ea6e-44cb-a9c7-ec9b271b8007">
+    <con:settings/>
+    <con:config service="ConstructPM Webservices" resourcePath="/cmic-field-rest-api/rest/1/annotationrelatedobjects" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="CPM Download Annotation Related Objects filter by Location Code and Trade Name" id="6a533c24-99b8-4929-8f03-f7bf458973f0" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qamob.cmicpaas.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://qamob.cmicpaas.com/cmicqadaily/cmic-field-rest-api/rest/1/annotationrelatedobjects</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4c625214-0e3e-418a-8cd0-a7a1dd7dcfeb" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="db261297-dff3-45a7-96aa-6448be87093a" name="Response SLA" disabled="true">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="filterbyproject;projUuid=${Login#Response#$['defaultProjectUuid']},docTradeName=Architectural,docLocationCode=A"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="4a8025f4-94ea-4501-9fea-c97dcac8b6cf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="666f0f54-3a2d-4ab8-b829-d61485c4034e">
+            <con:authProfile>UPG</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e6982624-acb8-444c-873d-074f9555a666">
+            <con:authProfile>QADAILY</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c42fbef-6237-4219-8044-b73695a4c38c">
+            <con:authProfile>QADAILY2</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="dcf09228-28f0-461d-97ba-ae52da190086">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
