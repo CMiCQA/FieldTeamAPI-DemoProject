@@ -1,6 +1,6 @@
 ﻿//USEUNIT CommonFunctions
 
-function DeleteBidItemsImport()
+function DeletePCI()
 {
   try{
     CommonFunctions.LaunchURL(Project.Variables.Environment)
@@ -14,30 +14,30 @@ function DeleteBidItemsImport()
 //------------------------------------------------------------------  
     CommonFunctions.Login(Project.Variables.Environment)
 //------------------------------------------------------------------ 
-  if (Aliases.Browser.PgeProjectManagement.frameTreeframe.LblBidItems.VisibleOnScreen == false){
-      Aliases.Browser.PgeProjectManagement.frameTreeframe.PnlBidManagement.Click()
+  Delay(3000, "Wait for page to load")
+  if (Aliases.Browser.PgeProjectManagement.frameTreeframe.LnkPCI.VisibleOnScreen == false){
+      Aliases.Browser.PgeProjectManagement.frameTreeframe.LblBudgetAndCostManagement.Click()
       }
-    Aliases.Browser.PgeProjectManagement.frameTreeframe.LblBidItems.Click()
-    Aliases.Browser.PgeProjectManagement.frameHeaderframe.LnkNavArrow.Click()
-    Aliases.Browser.PgeProjectManagement.frameHeaderframe.BtnShowimporteddata.Click()
-    Aliases.Browser.PgeShowImportedData.ChkBoxShowCurrentProj.Click()
+    Aliases.Browser.PgeProjectManagement.frameTreeframe.LnkPCI.Click()
     Delay(3000, "Wait for page to load")
 //-----------------------------------------------------------------
-    var filePath = Project.Variables.ReadyAPIProjectPath  + "\\TestData\\DataTransfer\\BidItemsDataTransfer.txt";
+    var folderPath = aqFileSystem.ExcludeTrailingBackSlash(ProjectSuite.Path)
+    folderPath =  aqFileSystem.GetFileFolder(folderPath)
+    var filePath = folderPath  + "\\TestData\\DataTransfer\\PCIDataTransfer.txt";
     var file = Sys.OleObject("Scripting.FileSystemObject").OpenTextFile(filePath, 1); // 1 for reading
     var fileContent = file.ReadLine();
-    ItemName = aqString.Unquote(fileContent)
-
-    objPnlCsvUploadRequestForm = Aliases.Browser.PgeShowImportedData.PnlCsvUploadRequestForm
-    objItemName = objPnlCsvUploadRequestForm.FindChildByXPath("//input[@value='"+ ItemName +"']//ancestor::td")
-    RowNum = objItemName.RowIndex
-    objCell = objPnlCsvUploadRequestForm.FindChild("Name","Cell("+RowNum+", 0)",30)
-    objCheckBox = objCell.FindChild("ObjectType","checkbox")
-    objCheckBox.Click()
+    PCICode = aqString.Unquote(fileContent)
 //-----------------------------------------------------------------
-    Aliases.Browser.PgeShowImportedData.BtnReValidate.Click()
-    Aliases.Browser.PgeShowImportedData.Confirm.buttonOk.Click()
-//------------------------------------------------------------------
+    Aliases.Browser.PgeProjectManagement.frameContentframe.TxtBoxSeachSC.SetText(PCICode)
+    Sys.Keys("[Enter]")
+    Delay(3000, "Wait for page to load")
+    objTblSearchResultsSC = Aliases.Browser.PgeProjectManagement.frameContentframe.TblSearchResultsSC
+    objContractCode = objTblSearchResultsSC.FindChildByXPath("//td[contains(text(),'"+PCICode+"')]")
+    objContractCode.Click()
+//-----------------------------------------------------------------
+    Aliases.Browser.PgeProjectManagement.frameHeaderframe.BtnDeleteAll.Click()
+    Aliases.Browser.PgeProjectManagement.frameContentframe.BtnYes.Click()
+//-----------------------------------------------------------------
     CommonFunctions.CloseBrowser()
   }
 //-----------------------------------------------------------------

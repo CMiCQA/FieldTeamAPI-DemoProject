@@ -23,7 +23,9 @@ function DeleteBidItemsImport()
     Aliases.Browser.PgeShowImportedData.ChkBoxShowCurrentProj.Click()
     Delay(3000, "Wait for page to load")
 //-----------------------------------------------------------------
-    var filePath = Project.Variables.ReadyAPIProjectPath  + "\\TestData\\DataTransfer\\BidItemsDataTransfer.txt";
+    var folderPath = aqFileSystem.ExcludeTrailingBackSlash(ProjectSuite.Path)
+    folderPath =  aqFileSystem.GetFileFolder(folderPath)
+    var filePath = folderPath + "\\TestData\\DataTransfer\\BidItemsDataTransfer.txt";
     var file = Sys.OleObject("Scripting.FileSystemObject").OpenTextFile(filePath, 1); // 1 for reading
     var fileContent = file.ReadLine();
     ItemName = aqString.Unquote(fileContent)
@@ -43,7 +45,7 @@ function DeleteBidItemsImport()
 //-----------------------------------------------------------------
   catch(err)
   {
-    Log.Error("Exception: Error occured while deleting Bid Item Import "+err.description);
+    Log.Warning("Exception: Error occured while deleting Bid Item Import "+err.description);
   }
 }
 

@@ -29,9 +29,6 @@
 					<Node name="var0">
 						<Prp name="name" type="S" value="Environment"/>
 					</Node>
-					<Node name="var1">
-						<Prp name="name" type="S" value="ReadyAPIProjectPath"/>
-					</Node>
 				</Node>
 				<Prp name="version" type="I" value="4"/>
 			</Node>

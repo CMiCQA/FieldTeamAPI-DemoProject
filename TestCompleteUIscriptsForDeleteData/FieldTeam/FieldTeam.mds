@@ -15,9 +15,6 @@
 				<Variable Name="Environment" Type="String" Local="False">
 					<DefValue StrValue="QALATEST" />
 				</Variable>
-				<Variable Name="ReadyAPIProjectPath" Type="String" Local="False">
-					<DefValue StrValue="C:\Users\Administrator\Documents\NOUS-CMIC_Projects\WORKING COPY\Field Team" />
-				</Variable>
 			</Items>
 		</data>
 	</variables>

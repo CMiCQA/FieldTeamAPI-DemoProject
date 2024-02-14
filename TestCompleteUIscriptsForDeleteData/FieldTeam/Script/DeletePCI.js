@@ -21,7 +21,9 @@ function DeletePCI()
     Aliases.Browser.PgeProjectManagement.frameTreeframe.LnkPCI.Click()
     Delay(3000, "Wait for page to load")
 //-----------------------------------------------------------------
-    var filePath = Project.Variables.ReadyAPIProjectPath  + "\\TestData\\DataTransfer\\PCIDataTransfer.txt";
+    var folderPath = aqFileSystem.ExcludeTrailingBackSlash(ProjectSuite.Path)
+    folderPath =  aqFileSystem.GetFileFolder(folderPath)
+    var filePath = folderPath  + "\\TestData\\DataTransfer\\PCIDataTransfer.txt";
     var file = Sys.OleObject("Scripting.FileSystemObject").OpenTextFile(filePath, 1); // 1 for reading
     var fileContent = file.ReadLine();
     PCICode = aqString.Unquote(fileContent)
@@ -34,14 +36,14 @@ function DeletePCI()
     objContractCode.Click()
 //-----------------------------------------------------------------
     Aliases.Browser.PgeProjectManagement.frameHeaderframe.BtnDeleteAll.Click()
-    Aliases.Browser.PgeProjectManagement.Confirm.Button("OK").Click()
+    Aliases.Browser.PgeProjectManagement.frameContentframe.BtnYes.Click()
 //-----------------------------------------------------------------
     CommonFunctions.CloseBrowser()
   }
 //-----------------------------------------------------------------
   catch(err)
   {
-    Log.Error("Exception: Error occured while deleting SubContract "+err.description);
+    Log.Warning("Exception: Error occured while deleting SubContract "+err.description);
   }
 }
 

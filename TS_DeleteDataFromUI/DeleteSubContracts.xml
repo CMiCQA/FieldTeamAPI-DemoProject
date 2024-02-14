@@ -13,7 +13,7 @@
       <runMode>UNIT</runMode>
       <exportTestLog/>
       <silentModeLog>C:\Users\Administrator\Documents\CMIC_TESTCOMPLETE_PROJECT\CMiC_FieldTeam\CMiC_FieldTeam.pjs</silentModeLog>
-      <projectSuiteFile>${projectDir}/FieldTeamAPI/CMiC_API_Testing/CMiC_API_Testing.pjs</projectSuiteFile>
+      <projectSuiteFile>${projectDir}/FieldTeamAPI/TestCompleteUIscriptsForDeleteData/CMiC_API_Testing.pjs</projectSuiteFile>
       <projectName>FieldTeam</projectName>
       <scriptUnit>DeleteSubContracts</scriptUnit>
       <scriptRoutine>DeleteSubContracts</scriptRoutine>
