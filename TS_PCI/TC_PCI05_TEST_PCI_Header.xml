@@ -508,7 +508,7 @@
     <con:config xsi:type="con:DataSinkStep">
       <con:dataSink type="File">
         <con:configuration>
-          <fileName>Field Team/TestData/DataTransfer/PCIDataTransfer.txt</fileName>
+          <fileName>FieldTeamAPI/TestData/DataTransfer/PCIDataTransfer.txt</fileName>
           <separator>,</separator>
           <escape>"</escape>
           <quote>true</quote>

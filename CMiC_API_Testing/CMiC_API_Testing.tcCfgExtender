@@ -128,11 +128,7 @@
 				<Node name="{8ee82d46-af98-4371-988c-39e367c94873}"/>
 			</Node>
 			<Node name="{fc9c0755-2819-4b25-8964-06a87b81e1ad}">
-				<Node name="cmic_api_testing">
-					<Node name="fieldteam">
-						<Node name="script"/>
-					</Node>
-				</Node>
+				<Node name="cmic_api_testing"/>
 				<Node name="cmic_api_testing logs"/>
 			</Node>
 		</Node>
